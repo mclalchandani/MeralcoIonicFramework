@@ -1,0 +1,220 @@
+/* Empty. Add your own CSS if you like */
+
+body {
+	background: #F3F3F3 !important;
+}
+
+.ed-intro {
+	color: #909090;
+	font-family: 'Exo 2', sans-serif;
+}
+.ed-intro, .ed-intro h1, .ed-intro h2, .ed-intro h3, .ed-intro h4, .ed-intro h5, .ed-intro h6 {
+	color: #5c5c5c;
+	 font-weight: 300;
+}
+
+h4.ed-guide {
+	font-family: 'Exo 2', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/* STYLE GUIDE v1 */
+
+
+
+/*CONTENT*/
+
+
+/*Header*/
+
+.ed-header {
+	background: url('../img/header-bg.png') top left;
+}
+
+	.ed-header h1.title {
+		color: #ccc;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 14px;
+		color: #ccc;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: bold;
+	}
+
+.ed-body {
+	padding:20px;
+	
+}	
+
+/*Step 1*/
+
+.ed-steps {}
+.ed-steps a i.icon {
+	color: #999;
+	font-size: 22px;
+}
+
+.ed-steps a i.icon small {font-size: 13px;}
+
+h3.ed-section-title {
+	    margin: 10px;
+	    margin-bottom: -7px;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-weight: bold;
+  color: #545454;
+  text-align: center;
+}
+
+.ed-note p {color: #666;}
+
+/*Security note*/
+.ed-secured {
+	  position: relative;
+	  color: #a7a7a7;
+	  line-height: 15px;
+	  clear: both;
+	  padding: 20px;
+}
+	.ed-secured p {
+		padding: 0 20px;
+		text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+	}
+
+	.ed-secured img {
+		width: 35px;
+		text-shadow: 1px 1px 3px rgba(255, 255, 255, 1);
+	}
+
+	.ed-secured i.icon {
+		font-size: 20px;
+		padding: 0 10px 10px 0;
+	}
+
+.ed-intro-text {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	padding: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	  margin-top: -212px;
+  z-index: 1000;
+}
+
+.ed-intro-text h3 {
+	font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  color: #FFF;
+}
+.ed-intro-text p {
+	color: #FFF;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 1px;
+}	
+
+a.applynewservice {
+	  width: 100%;
+  background-color: #FFF8F4;
+  color: #f5742c;
+  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 1px;
+  border: none;
+  padding: 12px 78px;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 39px;
+  border: 2px solid #fff;
+  /* width: 100%; */
+  /* margin-top: 50px; */
+  position: relative;
+  top: 20px;
+}	
+
+/*SIDE MENU*/
+.ed-menu-left {
+	background: url('../img/left-menu-bg.jpg') top right;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+  	line-height: 19px;
+  	letter-spacing: 1px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+	.ed-menu-left i.icon {
+		font-size: 17px;
+		color: #fff;
+	}
+
+	.ed-menu-left a.item {
+		  background: none;
+	  font-size: 13px;
+	  border: none;
+	  border-bottom: 1px solid #3A3636;
+	}
+
+		.ed-menu-left a.item:last-child {
+			border-bottom: none;
+		}
+
+	.ed-menu-left a.item.item-divider {
+		background: #242323;
+		opacity: 0.4;
+	}
+
+	.ed-menu-left h3.title {
+		  font-size: 13px;
+/*  line-height: 18px;*/
+  color: #fff;
+  float: none;
+  text-align: center;
+	}
+
+	.ed-menu-left a.ed-logout {
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+		float: none;
+		clear: both;
+		display: block;
+	}
+
+
+
+
+
+/*FOOTER*/
+
+.bar-footer {
+	height: 55px;
+}
+
+.ed-footer button {
+	text-transform: uppercase;
+	color: #f5742c;
+	background: none;
+	border: none;
+
+}
+
+	.ed-footer button.button {
+		font-size: 18px;
+		letter-spacing: 1px;
+	}
+
+
+/*UTILITY*/
+.ed-center {
+	text-align: center !important;
+}
+
+
+
