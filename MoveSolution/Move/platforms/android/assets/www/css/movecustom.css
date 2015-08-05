@@ -29,6 +29,7 @@ h4.ed-guide {
 
 /*Header*/
 
+
 .ed-header {
 	background: url('../img/header-bg.png') top left;
 }
@@ -67,6 +68,7 @@ h3.ed-section-title {
   font-weight: bold;
   color: #545454;
   text-align: center;
+  padding-top:50px;
 }
 
 .ed-note p {color: #666;}
@@ -214,6 +216,19 @@ a.applynewservice {
 /*UTILITY*/
 .ed-center {
 	text-align: center !important;
+}
+
+.slider{
+  position: absolute !important;
+  top: 0 ;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.slider-pager {
+	top: initial;
+	
 }
 
 
