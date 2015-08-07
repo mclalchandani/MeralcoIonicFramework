@@ -13,25 +13,21 @@
          -->
 
 
- <ion-slide-box on-slide-changed="slideChanged(index)" style="margin-bottom:1%;height:500px">
+ <ion-slide-box on-slide-changed="slideChanged(index)" style="margin-bottom:1%;">
 
 <!--Step 1-->
 <ion-slide>
-    <ion-content has-header="true" scroll="true">
-
-        <ion-header-bar id="1" class="ed-header" style="background:url('../img/header-bg.png') top left;">
-            <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-            <h1 class="title">Step 1</h1>
+    <ion-content has-header="true" scroll="true" >
+        
+        <ion-header-bar id="1" class="ed-header2">
+            <div class="buttons">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+                <button menu-toggle="left" class="button" ng-app="ApplyNewRequestCtrl" ng-click="exit()">Exit</button>
+                <h3 class="title">Step 1 - Requirements - Scan using your phone camera</h3>
+            </div>
         </ion-header-bar>
 
-
-        <div class="row" style="">
-            <!--Holds section title-->
-            <div class="col">
-                <h3 class="ed-section-title">Requirements - Scan using your phone camera</h3>
-            </div>
-        </div>
-
+        <div class="row"></div>
         <div class="ed-steps">
             <!--Holds section contents-->
             <div class="list card">
@@ -73,21 +69,16 @@
 
 <!--Step 2-->
 <ion-slide>
-
     <ion-content has-header="true" scroll="true">
 
-        <ion-header-bar id="2" class="ed-header" style="background:url('../img/header-bg.png') top left;">
-            <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-            <h1 class="title">Step 2</h1>
-        </ion-header-bar>
-
-
-        <div class="row" style="">
-            <!--Holds section title-->
-            <div class="col">
-                <h3 class="ed-section-title">Customer Name</h3>
+        <ion-header-bar id="2" class="ed-header2">
+            <div class="buttons">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+                <button menu-toggle="left" class="button" ng-app="ApplyNewRequestCtrl" ng-click="exit()">Exit</button>
+                <h3 class="title">Step 2 - Customer Name</h3>
             </div>
-        </div>
+        </ion-header-bar>
+        <div class="row"></div>
 
         <div class="ed-steps">
             <table style="width:100%">
@@ -194,6 +185,21 @@
 
             </table>
         </div>
+
+        <div class="row ed-note" style="text-align: center;">
+            <!--Holds the NOTE-->
+            <p><strong>Note:</strong> You may choose to <strong>SKIP</strong> this step and just bring the requirements to the BUsiness Center.</p>
+        </div>
+        <div class="ed-secured" style="text-align: center;">
+            <!--Holds security note-->
+            <p data-sr='enter top'>
+                <img src="img/padlock-icon.png">
+                <br />
+                <small>This transaction is secured and protected by Meralco's proprietary anti-virus and anti-theft systems.</small>
+            </p>
+        </div>
+
+
    </ion-content>
 </ion-slide>
 
@@ -201,18 +207,15 @@
  <ion-slide>
   <ion-content has-header="true" scroll="true">
 
-      <ion-header-bar id="3" class="ed-header" style="background:url('../img/header-bg.png') top left;">
-          <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-          <h1 class="title">Step 3</h1>
+      <ion-header-bar id="3" class="ed-header2">
+          <div class="buttons">
+              <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+              <button menu-toggle="left" class="button" ng-app="ApplyNewRequestCtrl" ng-click="exit();">Exit</button>
+              <h3 class="title">Step 3 - Service Address</h3>
+          </div>
       </ion-header-bar>
+      <div class="row"></div>
 
-                  
-        <div class="row" style="">
-            <!--Holds section title-->
-            <div class="col">
-                <h3 class="ed-section-title">Service Address</h3>
-            </div>
-        </div>
         <div class="ed-steps">
             <table style="width:100%">
                 <tr>
@@ -298,6 +301,19 @@
                 </tr>
             </table>
         </div>
+      <div class="row ed-note" style="text-align: center;">
+          <!--Holds the NOTE-->
+          <p><strong>Note:</strong> You may choose to <strong>SKIP</strong> this step and just bring the requirements to the BUsiness Center.</p>
+      </div>
+      <div class="ed-secured" style="text-align: center;">
+          <!--Holds security note-->
+          <p data-sr='enter top'>
+              <img src="img/padlock-icon.png">
+              <br />
+              <small>This transaction is secured and protected by Meralco's proprietary anti-virus and anti-theft systems.</small>
+          </p>
+      </div>
+
         </ion-content>
 </ion-slide>
 
@@ -305,18 +321,17 @@
  <ion-slide>
      <ion-content has-header="true" scroll="true">
 
-         <ion-header-bar id="4" class="ed-header" style="background:url('../img/header-bg.png') top left;">
-             <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-             <h1 class="title">Step 4</h1>
+         <ion-header-bar id="3" class="ed-header2">
+             <div class="buttons">
+                 <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+                 <button menu-toggle="left" class="button" ng-app="ApplyNewRequestCtrl" ng-click="exit();">Exit</button>
+                 <h3 class="title">Step 4 - Application Information</h3>
+             </div>
          </ion-header-bar>
 
+         <div class="row"></div>
+
          
-         <div class="row" style="">
-             <!--Holds section title-->
-             <div class="col">
-                 <h3 class="ed-section-title">Application Information</h3>
-             </div>
-         </div>
          <div class="ed-steps">
              <table style="width:100%">
                  <tr>
@@ -356,6 +371,19 @@
                  </tr>
              </table>
          </div>
+         <div class="row ed-note" style="text-align: center;">
+             <!--Holds the NOTE-->
+             <p><strong>Note:</strong> You may choose to <strong>SKIP</strong> this step and just bring the requirements to the BUsiness Center.</p>
+         </div>
+         <div class="ed-secured" style="text-align: center;">
+             <!--Holds security note-->
+             <p data-sr='enter top'>
+                 <img src="img/padlock-icon.png">
+                 <br />
+                 <small>This transaction is secured and protected by Meralco's proprietary anti-virus and anti-theft systems.</small>
+             </p>
+         </div>
+
     </ion-content>
 </ion-slide>
 </ion-slide-box>
@@ -363,10 +391,10 @@
 
 <ion-footer-bar align-title="left" class="ed-footer bar bar-footer">
 <div class="buttons">
-  <!-- <button class="button button-clear no-animation"
+  <button class="button button-positive button-clear no-animation"
           ng-click="startApp()" ng-show="!slideIndex">
-  Start
-  </button> -->
+      <i class="" style="color:#f5742c;"> Home</i>
+</button>
   <button class="button button-positive button-clear no-animation" ng-click="previous()" ng-show="slideIndex > 0">
     <i class="ion-android-arrow-back" style="color:#f5742c;" > Previous </i>
   </button>

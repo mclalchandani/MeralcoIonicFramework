@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers',
+angular.module('starter', ['ionic', 'starter.menucontrollers',
 'starter.dashboardcontrollers',
 'starter.maincontrollers',
 'starter.logincontrollers',
@@ -35,7 +35,7 @@ angular.module('starter', ['ionic', 'starter.controllers',
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    controller: 'menuCtrl'
   })
 
 

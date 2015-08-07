@@ -44,10 +44,218 @@ h4.ed-guide {
 		font-weight: bold;
 	}
 
+.ed-header2 {
+	background: #d5d5d5;
+}
+
+	.ed-header2 h1.title {
+		color: #fe7214;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}	
+
+	.ed-header2 i {
+		font-size: 10px;
+	}
+
+	.ed-header2 .button.button-icon {
+		font-size: 14px;
+  		text-transform: uppercase;
+  		color: #6B6B6B;
+	}
+
+
+
+
 .ed-body {
 	padding:20px;
+
 	
-}	
+}
+
+/*Login*/
+
+#ed-login {
+	background: #fe6f0f url('../img/loginbg.jpg') 50% -20px no-repeat;
+	background-size: cover;
+}
+
+	#ed-login .item-input, #ed-login .item-input input, #ed-login label.item {
+		background: none !important;
+		border: none;
+		color: #fff !important;
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		/*font-size: 18px;*/
+		
+	}
+
+		#ed-login label.item-input {
+			border-bottom: 1px solid rgb(247, 146, 78);
+		}
+
+	#ed-login ::-webkit-input-placeholder {	color: #fff;}
+	#ed-login :-moz-placeholder { /* Firefox 18- */ color: #fff; }
+	#ed-login ::-moz-placeholder {  /* Firefox 19+ */ color: #fff; }
+	#ed-login :-ms-input-placeholder { color: #fff; }
+	#ed-login .item .item-input input { color: #fff; }
+
+	#ed-login #ed-logo {
+		text-align: center;
+		height: 40vh;
+		padding-top:80px;
+		padding-bottom: 20px;
+	}
+
+	#ed-login #ed-logo img {
+		width: 50vh;
+	}
+
+	#ed-login #loginform {
+		height: 55vh;
+	}
+
+	#ed-login button.loginbutton {
+		height: 61px;
+		font-family: 'Montserrat', sans-serif;
+  		font-size: 18px;
+		background: rgb(169, 77, 20);
+		text-transform: uppercase;
+		color: #FDEBB4;
+		border: none;
+
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		margin-top: 30px;
+		margin-bottom: 5px;
+	}
+
+		#ed-login button.loginbutton i {
+			margin-left: 10px;
+		}
+
+		#ed-login h3, #ed-login h4 {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		#ed-login h3, #ed-login h3 a { /*Create and account*/
+			font-size: 17px;
+			color: rgb(255, 222, 118);
+			text-transform: uppercase;
+			margin-top: 30px;
+			text-decoration: none;
+		}
+
+		#ed-login h4, #ed-login h4 a { /*Forgot password*/
+			font-size: 14px;
+			color: #FFE4D2;
+			margin-top: 0;
+			text-decoration: none;
+		}
+
+		#ed-login a:active {
+			position: relative;
+			top: 2px;
+		}
+
+/*Dashboard*/
+
+#e-services {
+	margin-top: -40px;
+	margin-bottom: 15px;
+}
+
+#e-services ul li	{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 8px;
+	text-align: left;
+
+}
+
+	#e-services ul li a {
+		color: #fff;
+		text-decoration: none;		
+	}
+
+	#e-services i {
+		  margin-right: 10px;
+  font-size: 20px;
+  /* background-color: black; */
+  padding: 13px;
+  width: 43px;
+
+  vertical-align: middle;
+  height: 43px;
+/*  border-radius: 21px;
+    border: 1px solid #fff;*/
+  text-align: center;	
+	}
+
+.logindashboard {
+	padding: 0 10%;
+}
+.logindashboard button.loginbtn2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	background: none;
+	/*border: 1px solid #fff;*/
+	padding: 8 13px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	color: #F29739;
+	border-color: #FFDDB9;
+}
+
+.logindashboard button.registerbtn {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	background: none;
+	border: none;
+	padding: 8 13px;
+	color: #FFB770;
+}
+
+#efeed {
+	position: absolute; background: #3F332C; width: 100%;
+	margin-top: 25px;
+	color: #fff;
+}
+
+#efeed .outage-info {
+	padding: 10px 0;
+	border-top: 1px solid #5A473B;
+	font-family: 'Montserrat', sans-serif;
+}
+
+	#efeed .outage-info i {
+		font-size: 22px;
+		color: #CDCDCD;
+	}
+
+	#efeed .outage-info .info-date {
+		text-transform: uppercase;
+		font-size: 12px;
+		color: #6C6763;
+	}
+
+	#efeed .outage-info .info-title {
+		color: #CDCDCD;
+	}
+
+	#efeed .outage-info .info-desc {
+		color: #CFCFCF;
+		margin-top: 10px;
+	}
+
+	  
 
 /*Step 1*/
 
@@ -59,6 +267,12 @@ h4.ed-guide {
 
 .ed-steps a i.icon small {font-size: 13px;}
 
+	.ed-steps ::-webkit-input-placeholder {	color: #333; font-size: 17px;}
+	.ed-steps :-moz-placeholder { /* Firefox 18- */ color: #333; font-size: 17px;}
+	.ed-steps ::-moz-placeholder {  /* Firefox 19+ */ color: #333; font-size: 17px;}
+	.ed-steps :-ms-input-placeholder { color: #333; font-size: 17px;}
+	.ed-steps .item .item-input input { color: #333; font-size: 17px;}
+
 h3.ed-section-title {
 	    margin: 10px;
 	    margin-bottom: -7px;
@@ -69,6 +283,15 @@ h3.ed-section-title {
   color: #545454;
   text-align: center;
   padding-top:50px;
+}
+
+.ed-steps h4 {
+	  font-size: 13px;
+  text-transform: uppercase;
+  color: #bababa;
+  padding: 0 15px;
+  margin: 20px 0 -12px 0;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
 }
 
 .ed-note p {color: #666;}
@@ -127,9 +350,11 @@ a.applynewservice {
   font-size: 17px;
   letter-spacing: 1px;
   border: none;
+
   padding: 12px 78px;
   font-weight: bold;
   text-decoration: none;
+
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 39px;
@@ -166,6 +391,7 @@ a.applynewservice {
 		.ed-menu-left a.item:last-child {
 			border-bottom: none;
 		}
+
 
 	.ed-menu-left a.item.item-divider {
 		background: #242323;
@@ -227,9 +453,24 @@ a.applynewservice {
 }
 
 .slider-pager {
-	top: initial;
+    top: initial;
+}
+
+.mainbutton {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color:#fff;
+}
 	
 }
+
+
+
+
 
 
 

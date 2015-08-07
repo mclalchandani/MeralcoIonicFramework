@@ -1,39 +1,88 @@
 <!-- <ion-content class="has-header"> -->
 
 <ion-view view-title="" style="background:url('../img/header-bg.png') top left;">
-  <ion-header-bar class="ed-header"><!--Holds Page header-->
-      <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-      <!-- <h1 class="title"></h1> -->
-  </ion-header-bar>
 
-  <ion-list>
-    <div style="margin-top:50px;text-align:center"><h2>Meralco 2.0</h2></div>
-    <!-- <ion-item> -->
-      <div class="list card" style="margin-left:50px;">
-        <a href="#" class="item item-icon-left">
-          <i class="icon ion-clipboard"></i>
-            E-BILL & E-PAYMENT
-        </a>
-        <a href="#" class="item item-icon-left">
-          <i class="icon ion-calculator"></i>
-            USAGE CALCULATOR
-        </a>
-        <a href="#" class="item item-icon-left">
-            <i class="icon ion-forward"></i>
-            REQUEST NEW SERVICE
-        </a>
-      </div>
-    <!-- </ion-item> -->
-    <div class="buttons" style="margin-top:50px;text-align:center">
-      <button class="button" style="width:150px;border-radius: 17px;-moz-border-radius: 17px;-webkit-border-radius: 17px;border: 1px solid #000000;" ng-controller="LoginController" ng-click=LoginShow();> Login </button>
-      <button class="button" style="width:150px;border-radius: 17px;-moz-border-radius: 17px;-webkit-border-radius: 17px;border: 1px solid #000000;"> Register </button>
-    </div>
-
-    <div class="" style="margin-top:50px;text-align:left">
-      <h4>Outage Info: <h4>
-    </div>
+    <!--<ion-header-bar id="1" class="ed-header" style="background:url('../img/header-bg.png') top left;">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-header-bar>-->
 
 
-  </ion-list>
+    <ion-content id="ed-login">
+        <div class="row" id="ed-logo">
+            <!--Holds Logo-->
+            <div class="col">
+                <img src="img/move-logo.png">
+            </div>
+        </div>
+
+        <div id="e-services">
+            <!--Holds dashboard links-->
+            <div class="col col-80 col-offset-10">
+                <form>
+                    <div class="list">
+                        <ul>
+                            <li>
+                                <span><i class="ion ion-card"></i></span>
+                                <a href="#">E-Bills and Payments</a>
+                            </li>
+                            <li>
+                                <span><i class="ion ion-ios-calculator"></i></span>
+                                <a href="#">Usage Calculator</a>
+                            </li>
+                            <li>
+                                <span></span>
+                                    <button style="color:white;text-transform:uppercase;text-align:left; font-family:'Montserrat', sans-serif;font-size:18px" class="mainbutton ion ion-ios-bolt" ng-controller="MainCtrl" ng-click="submitForm()">
+                                        <span>
+
+                                            Request New Service
+
+                                        </span>
+                                    </button>
+                                
+                            </li>
+                        </ul>
+                    </div>
+
+                </form>
+            </div><!--/List Card-->
+        </div>
+
+        <div id="efeed" style="">
+            <!--Holds login and register links-->
+            <div class="">
+                <form>
+                    <div class="logindashboard ed-center">
+                        <div class="row" style="padding: 0;">
+                            <div class="col">
+                                <button class="button button-block loginbtn2" ng-controller="LoginController" ng-click="submitForm()"  type="submit">Login</button>
+                            </div>
+                            <div class="col">
+                                <button class="button button-block registerbtn" type="submit">Register</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="outage-info">
+                <div class="row">
+                    <div class="col col-10">
+                        <div><span><i class="ion ion-android-alert"></i></span></div>
+                    </div>
+                    <div class="col col-20">
+                        <div class="info-title">OUTAGE INFO</div>
+                    </div>
+                    <div class="col col-70">
+                        <div>
+                            <div class="info-date">July 01, 2015</div>
+                            <div class="info-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+
 </ion-view>
 <!-- <ion-content> -->

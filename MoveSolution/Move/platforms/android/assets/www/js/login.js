@@ -1,7 +1,7 @@
 
 angular.module('starter.logincontrollers', [])
 .controller('LoginController',
-	function($scope, $ionicModal, $compile, $ionicLoading, $timeout, $ionicPopup)
+	function ($scope, $ionicModal, $compile, $ionicLoading, $timeout, $ionicPopup, $state)
 	{
     	$scope.login = {
 	    	username: '',
@@ -50,7 +50,7 @@ angular.module('starter.logincontrollers', [])
 			console.log("logout");
 		}
 
-    $scope.loginOffline = function(){
+		$scope.loginOffline = function () {
 			// $scope.change_busy_caption("Signing In");
 			// $scope.show_busy();
 
@@ -61,7 +61,11 @@ angular.module('starter.logincontrollers', [])
 	    		$scope.userID = loginResult.uID;
 	    		$scope.SIN = loginResult.SIN;
 	    		$scope.displayName = loginResult.name;
-					$scope.hidenavbarButton=false;
+			    $scope.hidenavbarButton=false;
+			    
+			    console.log($scope.loginData.username);
+			    window.sessionStorage.setItem("userName", $scope.loginData.username);
+			    
 
 
 	    		//Show main page and close login modal upon successful login
@@ -70,7 +74,7 @@ angular.module('starter.logincontrollers', [])
 	    		$scope.modal.hide();
 	    		var magicScope = angular.element($("#db_page")).scope();
 	    		// magicScope.loadCards();
-
+	    		//$state.go('app.');
 
 	    	}else{
 	    		$scope.close_busy();

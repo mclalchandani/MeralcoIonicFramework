@@ -1,21 +1,25 @@
-angular.module('starter.Apply_NewRequest', [])
+angular.module('starter.Apply_NewRequest', ['ionic'])
 
 .controller('ApplyNewRequestCtrl', function($scope, $state, $ionicSlideBoxDelegate, $ionicScrollDelegate) {
+
+    // Exit app
+    $scope.exit = function () {
+    ionic.Platform.exitApp();
+    }
+
   // Called to navigate to the main app
-
-
   $scope.startApp = function() {
-    $state.go('app.intro_main');
+    $state.go('app.main');
   };
+
   $scope.next = function() {
     $ionicSlideBoxDelegate.next();
   };
+
   $scope.previous = function() {
     $ionicSlideBoxDelegate.previous();
   };
 
-  // $scope.$apply();
-  $ionicSlideBoxDelegate.update();
 
   // Called each time the slide changes
   $scope.slideChanged = function(index) {
@@ -46,15 +50,5 @@ angular.module('starter.Apply_NewRequest', [])
     console.log("rateclass selected text:", item.text, "selected value", item.value);
   };
 
-
-
 });
 
-
-// .controller('intro_MainCtrl', function($scope, $state) {
-//   console.log('intro_MainCtrl');
-//
-//   $scope.toIntro = function(){
-//     $state.go('app.intro');
-//   }
-// });
