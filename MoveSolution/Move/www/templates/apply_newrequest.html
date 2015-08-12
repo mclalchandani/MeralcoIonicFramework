@@ -3,6 +3,9 @@
 
 
 <ion-view view-title="New Service Request" hide-nav-bar="false" style="">
+
+
+
  <ion-content id="rns_page" scroll="false">
 
      <!--
@@ -11,14 +14,16 @@
      <h1 class="title"></h1>
   </ion-header-bar>
          -->
-
+<form name="frm_user">
 
  <ion-slide-box on-slide-changed="slideChanged(index)" style="margin-bottom:1%;">
+
+
 
 <!--Step 1-->
 <ion-slide>
     <ion-content has-header="true" scroll="true" >
-        
+
         <ion-header-bar id="1" class="ed-header2">
             <div class="buttons">
                 <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
@@ -89,10 +94,6 @@
                             <span class="input-label">Service ID Number</span>
                             <input type="text" ng-model="user.service_id" name="service_id" id="service_id" required="" placeholder="Service ID Number" ng-maxlength="20">
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.service_id.$touched">
-                            <div ng-show="rns_form.service_id.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.service_id.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -101,10 +102,6 @@
                             <span class="input-label">First Name</span>
                             <input type="text" ng-model="user.first_name" name="first_name" id="first_name" required="" placeholder="First Name" ng-maxlength="20">
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.first_name.$touched">
-                            <div ng-show="rns_form.first_name.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.first_name.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -113,10 +110,6 @@
                             <span class="input-label">Middle Name</span>
                             <input type="text" ng-model="user.middle_name" name="middle_name" id="middle_name" required="" placeholder="Middle Name" ng-maxlength="20">
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.middle_name.$touched">
-                            <div ng-show="rns_form.middle_name.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.middle_name.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -125,10 +118,6 @@
                             <span class="input-label">Last Name</span>
                             <input type="text" ng-model="user.last_name" name="last_name" id="last_name" required="" placeholder="Last Name" ng-maxlength="20">
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.last_name.$touched">
-                            <div ng-show="rns_form.last_name.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.last_name.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -137,10 +126,6 @@
                             <span class="input-label">Birthdate</span>
                             <input type="text" ng-model="user.birthdate" name="birthdate" id="birthdate" required="" placeholder="Birthdate (mm/dd/yyyy)">
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.birthdate.$touched">
-                            <div ng-show="rns_form.birthdate.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.birthdate.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -149,11 +134,6 @@
                             <span class="input-label">Contact Number</span>
                             <input ng-pattern="/^[0-9]{1,12}$/" type="tel" ng-model="user.contact_number" placeholder="Contact Number" name="contact_number" id="contact_number" ng-maxlength="20" required="" />
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.contact_number.$touched">
-                            <div ng-show="rns_form.contact_number.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.contact_number.$error.pattern" class="form_error">*Invalid Format</div>
-                            <div ng-show="rns_form.contact_number.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -162,11 +142,6 @@
                             <span class="input-label">CP No</span>
                             <input ng-pattern="/^[0-9]{1,12}$/" type="tel" ng-model="user.cp_no" placeholder="CP No" name="cp_no" id="cp_no" ng-maxlength="20" required="" />
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.cp_no.$touched">
-                            <div ng-show="rns_form.cp_no.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.cp_no.$error.pattern" class="form_error">*Invalid Format</div>
-                            <div ng-show="rns_form.cp_no.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -175,11 +150,6 @@
                             <span class="input-label">Email Address</span>
                             <input type="email" ng-model="user.email" placeholder="Email Address" name="email" id="email" ng-maxlength="20" required="" />
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.email.$touched">
-                            <div ng-show="rns_form.email.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.email.$error.pattern" class="form_error">*Invalid Format</div>
-                            <div ng-show="rns_form.email.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
 
@@ -224,11 +194,6 @@
                             <span class="input-label">House No</span>
                             <input ng-pattern="/^[0-9]{1,12}$/" type="number" ng-model="user.house_number" placeholder="House Number" name="house_number" id="house_number" ng-maxlength="20" required="" />
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.house_number.$touched">
-                            <div ng-show="rns_form.house_number.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.house_number.$error.pattern" class="form_error">*Invalid Format</div>
-                            <div ng-show="rns_form.house_number.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
 
@@ -236,13 +201,9 @@
                     <td>
                         <label class="item item-input item-floating-label">
                             <span class="input-label">Street</span>
-                            <input type="text" ng-model="user.street" placeholder="Street" 
+                            <input type="text" ng-model="user.street" placeholder="Street"
                                     name="street" id="street" ng-maxlength="20" required="" />
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.street.$touched">
-                            <div ng-show="rns_form.street.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.street.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
 
@@ -252,10 +213,6 @@
                             <span class="input-label">Barangay</span>
                             <input type="text" ng-model="user.barangay" name="barangay" id="barangay" required="" placeholder="Barangay" ng-maxlength="20">
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.barangay.$touched">
-                            <div ng-show="rns_form.barangay.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.barangay.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
 
@@ -267,10 +224,6 @@
                             <input type="text" ng-model="user.city" placeholder="City/Province "
                                     name="city" id="city" ng-maxlength="20" required="" />
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.city.$touched">
-                            <div ng-show="rns_form.city.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.city.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
 
@@ -281,10 +234,6 @@
                             <span class="input-label">Nearest Landmark</span>
                             <input type="text" ng-model="user.landmark" name="landmark" id="landmark" required="" placeholder="Landmark" ng-maxlength="20">
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.landmark.$touched">
-                            <div ng-show="rns_form.landmark.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.landmark.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -293,10 +242,6 @@
                             <span class="input-label">Additional Remarks</span>
                             <input type="text" ng-model="user.remarks" name="remarks" id="remarks" required="" placeholder="Additional Remarks" ng-maxlength="20">
                         </label>
-                        <div ng-show="rns_form.$submitted || rns_form.remarks.$touched">
-                            <div ng-show="rns_form.remarks.$error.required" class="form_error">*Required Field</div>
-                            <div ng-show="rns_form.remarks.$error.maxlength" class="form_error">*Input is too long</div>
-                        </div>
                     </td>
                 </tr>
             </table>
@@ -331,7 +276,7 @@
 
          <div class="row"></div>
 
-         
+
          <div class="ed-steps">
              <table style="width:100%">
                  <tr>
@@ -363,10 +308,6 @@
                              <span class="input-label">Number of Units</span>
                              <input type="number" ng-disabled="loc_toggle" ng-model="user.units" name="units" id="units" required="" placeholder="Number of Units" ng-maxlength="100">
                          </label>
-                         <div ng-show="rns_form.$submitted || rns_form.units.$touched">
-                             <div ng-show="rns_form.units.$error.required" class="form_error">*Required Field</div>
-                             <div ng-show="rns_form.units.$error.maxlength" class="form_error">*Input is too long</div>
-                         </div>
                      </td>
                  </tr>
              </table>
@@ -384,11 +325,15 @@
              </p>
          </div>
 
+         <div class="spacer" style="height: 5px;"></div>
+         <button class="button icon ion-person-stalker button-balanced button-block" ng-click="submit();"> Save</button>
+
     </ion-content>
 </ion-slide>
+</form>
+
 </ion-slide-box>
 </ion-content>
-
 <ion-footer-bar align-title="left" class="ed-footer bar bar-footer">
 <div class="buttons">
   <button class="button button-positive button-clear no-animation"
@@ -412,4 +357,3 @@
 
 
 </ion-view>
-<!-- </div>

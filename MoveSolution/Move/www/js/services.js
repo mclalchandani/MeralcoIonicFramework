@@ -1,4 +1,84 @@
-angular.module('starter.service',[])
+angular.module('starter.services', []).factory('crudservice', ['$http','$q',crudservice])
+function crudservice($http,$q)
+{
+var baseUrl = 'http://herudi-sahimar.16mb.com/simplecrud/';
+return{
+  getAll: function() {
+      return $http.get(baseUrl+'select.php');
+    },
+  create: function(servicerequest) {
+    console.log(servicerequest);
+    return $http.post(baseUrl+'insert.php',servicerequest,{
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;'
+            }
+        });
+  }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// angular.module('starter.service',[])
+// .factory('crudservice',function($http)
+// {
+//   var baseUrl='http://herudi-sahimar.16mb.com/simplecrud/';
+//   return
+//   {
+//     getAll = function() {
+//       return $http.get(baseUrl+'select.php');
+//     };
+//
+//     create = function(servicerequest)
+//     {
+//
+//       return $http.post(baseUrl+'insert.php',servicerequest,{
+//           headers: {
+//               'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;'
+//           });
+//     }};
+//
+//
+// }
+// })
+//
+
+
+
+// ,
+// create = function(servicerequest)
+// {
+//
+//   return $http.post(baseUrl+'insert.php',servicerequest,{
+//       headers: {
+//           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;'
+//       });
+// }},
+// delete = function(id)
+// {
+//   return $http.get(baseUrl+'delete.php?id='+id);
+// },
+// update = function(servicerequest)
+// {
+//   return $http.post(baseUrl+'update.php',servicerequest,{
+//       headers: {
+//           'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;'
+//       }
+//   })
+//
+// };
+
+
 
 // .factory('firebasedb',function($http)
 // {

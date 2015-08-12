@@ -9,7 +9,7 @@ angular.module('starter', ['ionic', 'starter.menucontrollers',
 'starter.maincontrollers',
 'starter.logincontrollers',
 'starter.Apply_NewRequest',
-'starter.Intro_NewRequest'])
+'starter.Intro_NewRequest','starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
