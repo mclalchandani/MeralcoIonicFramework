@@ -5,8 +5,10 @@
       <button class="button button-clear" ng-click="Logout()" >Close</button>
     </div>
   </ion-header-bar>-->
-  <ion-content>
-
+  <ion-content id="ed-login" locking="true">
+  <div id="ed-close-page">
+    <span><i class="icon ion-close-round"></i></span>
+  </div>
 
       <div class="row" id="ed-logo">
           <!--Holds Logo-->
@@ -15,72 +17,54 @@
           </div>
       </div>
 
-      <div id="loginform">
-          <!--Holds login form contents-->
-          <div class="">
-              <form ng-submit="loginOffline();" ng-controller="LoginController">
-                  <div class="list">
-                      <div class="row row-center" style="padding: 0 20px 0 7px;">
-                          <div class="col col-10" style="  text-align: center; font-size: 22px; color: wheat;">
-                              <span><i class="icon ion-email"></i></span>
-                          </div>
-                          <div class="col">
-                              <div class="">
-                                  <label class="item item-input">
-                                      <input type="text" placeholder="First Name" ng-model="loginData.username">
-                                  </label>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row row-center" style="padding: 0 20px 0 7px;">
-                          <div class="col col-10" style="  text-align: center; font-size: 22px; color: wheat;">
-                              <span><i class="icon ion-key"></i></span>
-                          </div>
-                          <div class="col">
-                              <div class="">
-                                  <label class="item item-input">
-                                      <input type="password" placeholder="Password" ng-model="loginData.password">
-                                  </label>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col">
-                              <label class="">
-                                  <button class="button button-block loginbutton" type="submit">
-                                      Login<span><i class="icon ion-arrow-right-c"></i></span>
-                                  </button>
-                              </label>
-                          </div>
-                      </div>
-                      <div class="row ed-center">
-                          <div class="col">
-                              <h4><a href="#">Forgot password?</a></h4>
-                              <h3><a href="#">Create account</a></h3>
-                          </div>
-                      </div>
+     <div id="loginform"><!--Holds login form contents-->
+                <div class="">
+                    <form ng-submit="loginOffline();" ng-controller="LoginController">
+                        <div class="list">
+                            <div class="row row-center" style="padding: 0 20px 0 7px;">
+                                <div class="col col-10" style="  text-align: center; font-size: 22px; color: wheat;">
+                                    <span><i class="icon ion-email"></i></span>
+                                </div>
+                                <div class="col">
+                                    <div class="">
+                                        <label class="item item-input">
+                                            <input type="text" placeholder="First Name" ng-model="loginData.username">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-center" style="padding: 0 20px 0 7px;">
+                                <div class="col col-10" style="  text-align: center; font-size: 22px; color: wheat;">
+                                    <span><i class="icon ion-key"></i></span>
+                                </div>
+                                <div class="col">
+                                    <div class="">
+                                        <label class="item item-input">
+                                            <input type="password" placeholder="Password" ng-model="loginData.password">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="">
+                                        <button class="button button-block loginbutton" type="submit">
+                                        Login<span><i class="icon ion-arrow-right-c"></i></span></button>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row ed-center">
+                                <div class="col">
+                                    <h4><a href="#">Forgot password?</a></h4>
+                                    <h3><a href="#">Create account</a></h3>
+                                </div>
+                            </div>
+             
+                        </div>
 
-                  </div>
-
-              </form>
-          </div><!--/List Card-->
-      </div>          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    </form>
+                </div><!--/List Card-->
+            </div>           
 
 
 

@@ -35,32 +35,38 @@ h4.ed-guide {
 }
 
 	.ed-header h1.title {
-		color: #ccc;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 14px;
-		color: #ccc;
 		text-transform: uppercase;
 		color: #fff;
 		font-weight: bold;
 	}
 
-.ed-header2 {
-	background: #d5d5d5;
+.ed-header_service-request {
+	background: #e7e7e7 !important;
 }
 
-	.ed-header2 h1.title {
-		color: #fe7214;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 14px;
-		text-transform: uppercase;
-		font-weight: bold;
-	}	
+	h1.sectiontitle {
+		color: #fe7214 !important;
+		font-family: 'Montserrat', sans-serif !important;
+		font-size: 14px !important;
+		text-transform: uppercase !important;
+		font-weight: bold !important;
+		text-align: center;
+		margin: 10px auto;
+	}
 
-	.ed-header2 i {
+	h3.pagetitle {
+		font-size: 18px;
+		font-family: 'Montserrat', sans-serif !important;
+		color: #666;
+	}
+
+	.ed-header_service-request i {
 		font-size: 10px;
 	}
 
-	.ed-header2 .button.button-icon {
+	.ed-header_service-request .button.button-icon {
 		font-size: 14px;
   		text-transform: uppercase;
   		color: #6B6B6B;
@@ -72,7 +78,7 @@ h4.ed-guide {
 .ed-body {
 	padding:20px;
 
-	
+
 }
 
 /*Login*/
@@ -89,7 +95,7 @@ h4.ed-guide {
 		font-family: 'Montserrat', sans-serif;
 		text-transform: uppercase;
 		/*font-size: 18px;*/
-		
+
 	}
 
 		#ed-login label.item-input {
@@ -105,7 +111,7 @@ h4.ed-guide {
 	#ed-login #ed-logo {
 		text-align: center;
 		height: 40vh;
-		padding-top:80px;
+		padding-top:60px;
 		padding-bottom: 20px;
 	}
 
@@ -160,6 +166,14 @@ h4.ed-guide {
 			position: relative;
 			top: 2px;
 		}
+#ed-close-page  {
+    padding: 10px;
+    text-align: right;
+    font-size: 20px;
+    color: #fff;
+    position: fixed;
+    right: 7px; top: 7px;
+}
 
 /*Dashboard*/
 
@@ -169,32 +183,36 @@ h4.ed-guide {
 }
 
 #e-services ul li	{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
-	text-transform: uppercase;
-	color: #fff;
-	margin-bottom: 8px;
-	text-align: left;
+	margin-bottom: 10px;
 
 }
 
 	#e-services ul li a {
 		color: #fff;
-		text-decoration: none;		
+		text-decoration: none;
 	}
 
-	#e-services i {
-		  margin-right: 10px;
-  font-size: 20px;
-  /* background-color: black; */
-  padding: 13px;
-  width: 43px;
+	#e-services ul li button {
+		color:white;
+		text-transform:uppercase;
+		text-align:left;
+		font-family:'Montserrat', sans-serif;
+		font-size:18px;
 
-  vertical-align: middle;
-  height: 43px;
-/*  border-radius: 21px;
-    border: 1px solid #fff;*/
-  text-align: center;	
+
+		/*  border-radius: 21px;
+    		border: 1px solid #fff;*/
+  		text-align: left;
+
+	}
+
+	#e-services ul li button span  {
+		/*margin-left: 20px;*/
+	    display: inline;
+	    /*margin-left: 18px;*/
+	    padding-top: 0;
+	    /*height: 30px;*/
+	    /*float: right;*/
 	}
 
 .logindashboard {
@@ -255,11 +273,13 @@ h4.ed-guide {
 		margin-top: 10px;
 	}
 
-	  
+
 
 /*Step 1*/
 
-.ed-steps {}
+.ed-steps {
+	margin-top: 50px;
+}
 .ed-steps a i.icon {
 	color: #999;
 	font-size: 22px;
@@ -340,10 +360,10 @@ h3.ed-section-title {
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 1px;
-}	
+}
 
 a.applynewservice {
-	  width: 100%;
+	  /*width: 100%;*/
   background-color: #FFF8F4;
   color: #f5742c;
   text-transform: uppercase;
@@ -362,8 +382,8 @@ a.applynewservice {
   /* width: 100%; */
   /* margin-top: 50px; */
   position: relative;
-  top: 20px;
-}	
+ /* top: 20px;*/
+}
 
 /*SIDE MENU*/
 .ed-menu-left {
@@ -465,12 +485,5 @@ a.applynewservice {
     outline:none;
     color:#fff;
 }
-	
+
 }
-
-
-
-
-
-
-

@@ -2,6 +2,15 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
 
 .controller('ApplyNewRequestCtrl', function($scope, $state, $ionicSlideBoxDelegate, $ionicScrollDelegate,crudservice,$ionicPopup) {
 
+    //document.getElementById('first_name').setAttribute('value','xxxxx');
+
+    $scope.getmyapplication = function () {
+    alert("test");
+    }
+
+
+$scope.getmyapplication();
+
     // Exit app
     $scope.exit = function () {
     ionic.Platform.exitApp();
@@ -55,10 +64,10 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
   $scope.servicerequest={};
   $scope.submit=function()
   {
-    console.log(document.getElementById('service_id').value);
+    console.log(document.getElementById('first_name').value);
     // alert(user.units);
   crudservice.create({
-      service_id: document.getElementById('service_id').value,
+      //service_id: document.getElementById('service_id').value,
       first_name: document.getElementById('first_name').value,
       middle_name: document.getElementById('middle_name').value,
       last_name: document.getElementById('last_name').value,

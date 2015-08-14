@@ -3,7 +3,7 @@ angular.module('starter.maincontrollers', [])
 .controller('MainCtrl', function ($scope, $state, $ionicModal) {
 
     $scope.hidenavbarButton = false;
-
+    
 
 
 $scope.submitForm = function ()
@@ -33,4 +33,3 @@ $scope.submitForm = function ()
 
 
 })
-

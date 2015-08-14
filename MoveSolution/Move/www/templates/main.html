@@ -22,23 +22,22 @@
                     <div class="list">
                         <ul>
                             <li>
-                                <span><i class="ion ion-card"></i></span>
-                                <a href="#">E-Bills and Payments</a>
+                                <button class="mainbutton" ng-controller="MainCtrl" ng-click="submitForm()">
+                                    <span class="ion ion-card"></span>
+                                    <span style="padding-left: 10px;">E-bills &amp; Payments</span>
+                                </button>
                             </li>
                             <li>
-                                <span><i class="ion ion-ios-calculator"></i></span>
-                                <a href="#">Usage Calculator</a>
+                                <button class="mainbutton" ng-controller="MainCtrl" ng-click="submitForm()">
+                                    <span class="ion ion-calculator"></span>
+                                    <span style="padding-left: 10px;">Usage Calculator</span>
+                                </button>
                             </li>
                             <li>
-                                <span></span>
-                                    <button style="color:white;text-transform:uppercase;text-align:left; font-family:'Montserrat', sans-serif;font-size:18px" class="mainbutton ion ion-ios-bolt" ng-controller="MainCtrl" ng-click="submitForm()">
-                                        <span>
-
-                                            Request New Service
-
-                                        </span>
-                                    </button>
-                                
+                                <button class="mainbutton" ng-controller="MainCtrl" ng-click="submitForm()">
+                                    <span class="ion ion-android-add-circle"></span>
+                                    <span style="padding-left: 10px;">Request New Service</span>
+                                </button>
                             </li>
                         </ul>
                     </div>

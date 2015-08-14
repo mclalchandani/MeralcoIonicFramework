@@ -1,14 +1,14 @@
 angular.module('starter.services', []).factory('crudservice', ['$http','$q',crudservice])
 function crudservice($http,$q)
 {
-var baseUrl = 'http://herudi-sahimar.16mb.com/simplecrud/';
+var baseUrl = 'http://move-ws.cfapps.io/';
 return{
-  getAll: function() {
-      return $http.get(baseUrl+'select.php');
+  getservbyId: function(servId) {
+      return $http.get(baseUrl+'get-service',servId);
     },
   create: function(servicerequest) {
     console.log(servicerequest);
-    return $http.post(baseUrl+'insert.php',servicerequest,{
+    return $http.post(baseUrl+'service-application-request',servicerequest,{
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;'
             }

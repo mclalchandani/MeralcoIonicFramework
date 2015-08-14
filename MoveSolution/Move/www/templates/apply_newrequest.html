@@ -3,9 +3,6 @@
 
 
 <ion-view view-title="New Service Request" hide-nav-bar="false" style="">
-
-
-
  <ion-content id="rns_page" scroll="false">
 
      <!--
@@ -14,47 +11,54 @@
      <h1 class="title"></h1>
   </ion-header-bar>
          -->
+
 <form name="frm_user">
 
  <ion-slide-box on-slide-changed="slideChanged(index)" style="margin-bottom:1%;">
 
 
-
 <!--Step 1-->
 <ion-slide>
-    <ion-content has-header="true" scroll="true" >
+    <ion-content has-header="true" scroll="true" style="background: f3f3f3;">
 
-        <ion-header-bar id="1" class="ed-header2">
+        <ion-header-bar id="1" class="ed-header_service-request">
             <div class="buttons">
                 <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
                 <button menu-toggle="left" class="button" ng-app="ApplyNewRequestCtrl" ng-click="exit()">Exit</button>
-                <h3 class="title">Step 1 - Requirements - Scan using your phone camera</h3>
+
             </div>
+            <h1 class="sectiontitle">Step 1</h3>
         </ion-header-bar>
 
-        <div class="row"></div>
-        <div class="ed-steps">
-            <!--Holds section contents-->
-            <div class="list card">
-                <a href="#" class="item item-icon-right">
-                    <i class="icon ion-camera"><small>Attach</small></i>
-                    Wiring permit
-                </a>
-                <a href="#" class="item item-icon-right">
-                    <i class="icon ion-camera"><small>Attach</small></i>
-                    Proof of ownership
-                </a>
-                <a href="#" class="item item-icon-right">
-                    <i class="icon ion-camera"><small>Attach</small></i>
-                    Valid ID
-                </a>
-                <a href="#" class="item item-icon-right">
-                    <i class="icon ion-camera"><small>Attach</small></i>
-                    Notarized undertaking
-                </a>
-            </div><!--/List Card-->
-        </div>
+        <div class="row">
+            <div class="col">
+                <div class="ed-steps">
+                    <div class="col">
+                        <h3 class="pagetitle">Requirements - Scan using your phone camera</h3>
+                    </div>
+                <!--Holds section contents-->
+                <div class="list card">
+                    <a href="#" class="item item-icon-right">
+                        <i class="icon ion-camera"><small>Attach</small></i>
+                        Wiring permit
+                    </a>
+                    <a href="#" class="item item-icon-right">
+                        <i class="icon ion-camera"><small>Attach</small></i>
+                        Proof of ownership
+                    </a>
+                    <a href="#" class="item item-icon-right">
+                        <i class="icon ion-camera"><small>Attach</small></i>
+                        Valid ID
+                    </a>
+                    <a href="#" class="item item-icon-right">
+                        <i class="icon ion-camera"><small>Attach</small></i>
+                        Notarized undertaking
+                    </a>
+                </div><!--/List Card-->
+            </div>
+            </div>
 
+        </div>
         <div class="row ed-note" style="text-align: center;">
             <!--Holds the NOTE-->
             <p><strong>Note:</strong> You may choose to <strong>SKIP</strong> this step and just bring the requirements to the BUsiness Center.</p>
@@ -76,23 +80,29 @@
 <ion-slide>
     <ion-content has-header="true" scroll="true">
 
-        <ion-header-bar id="2" class="ed-header2">
+        <ion-header-bar id="2" class="ed-header_service-request">
             <div class="buttons">
                 <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
                 <button menu-toggle="left" class="button" ng-app="ApplyNewRequestCtrl" ng-click="exit()">Exit</button>
-                <h3 class="title">Step 2 - Customer Name</h3>
+
             </div>
+            <h1 class="sectiontitle">Step 2</h3>
         </ion-header-bar>
+
         <div class="row"></div>
 
         <div class="ed-steps">
+            <div class="col">
+                <h3 class="pagetitle">Requirements - Scan using your phone camera</h3>
+            </div>
             <table style="width:100%">
                 <tr>
 
                     <td>
                         <label class="item item-input item-floating-label">
-                            <span class="input-label">Service ID Number</span>
-                            <input type="text" ng-model="user.service_id" name="service_id" id="service_id" required="" placeholder="Service ID Number" ng-maxlength="20">
+                            Service ID Number:
+                            <!--<span class="input-label">Service ID Number</span>
+                            <input type="text" ng-model="user.service_id" name="service_id" id="service_id" required="" placeholder="Service ID Number" ng-maxlength="20">-->
                         </label>
                     </td>
                 </tr>
@@ -100,7 +110,7 @@
                     <td>
                         <label class="item item-input item-floating-label">
                             <span class="input-label">First Name</span>
-                            <input type="text" ng-model="user.first_name" name="first_name" id="first_name" required="" placeholder="First Name" ng-maxlength="20">
+                            <input type="text" ng-value="tessss" ng-model="user.first_name" name="first_name" id="first_name" required="" placeholder="First Name" ng-maxlength="20">
                         </label>
                     </td>
                 </tr>
@@ -177,16 +187,19 @@
  <ion-slide>
   <ion-content has-header="true" scroll="true">
 
-      <ion-header-bar id="3" class="ed-header2">
+      <ion-header-bar id="3" class="ed-header_service-request">
           <div class="buttons">
               <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
               <button menu-toggle="left" class="button" ng-app="ApplyNewRequestCtrl" ng-click="exit();">Exit</button>
-              <h3 class="title">Step 3 - Service Address</h3>
           </div>
+          <h1 class="sectiontitle">Step 1</h3>
       </ion-header-bar>
       <div class="row"></div>
 
         <div class="ed-steps">
+            <div class="col">
+                <h3 class="pagetitle">Requirements - Scan using your phone camera</h3>
+            </div>
             <table style="width:100%">
                 <tr>
                     <td>
@@ -266,7 +279,7 @@
  <ion-slide>
      <ion-content has-header="true" scroll="true">
 
-         <ion-header-bar id="3" class="ed-header2">
+         <ion-header-bar id="3" class="ed-header_service-request">
              <div class="buttons">
                  <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
                  <button menu-toggle="left" class="button" ng-app="ApplyNewRequestCtrl" ng-click="exit();">Exit</button>
@@ -312,6 +325,10 @@
                  </tr>
              </table>
          </div>
+         <div class="spacer" style="height: 5px;"></div>
+         <button class="button icon ion-person-stalker button-block" style="background-color: #f5742c;" ng-click="submit();"> Save</button>
+
+
          <div class="row ed-note" style="text-align: center;">
              <!--Holds the NOTE-->
              <p><strong>Note:</strong> You may choose to <strong>SKIP</strong> this step and just bring the requirements to the BUsiness Center.</p>
@@ -325,15 +342,16 @@
              </p>
          </div>
 
-         <div class="spacer" style="height: 5px;"></div>
-         <button class="button icon ion-person-stalker button-balanced button-block" ng-click="submit();"> Save</button>
+
 
     </ion-content>
 </ion-slide>
-</form>
 
 </ion-slide-box>
+</form>
+
 </ion-content>
+
 <ion-footer-bar align-title="left" class="ed-footer bar bar-footer">
 <div class="buttons">
   <button class="button button-positive button-clear no-animation"
@@ -357,3 +375,4 @@
 
 
 </ion-view>
+<!-- </div>
