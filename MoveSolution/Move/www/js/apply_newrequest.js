@@ -1,19 +1,21 @@
 angular.module('starter.Apply_NewRequest', ['ionic'])
 
-.controller('ApplyNewRequestCtrl', function($scope, $state, $ionicSlideBoxDelegate, $ionicScrollDelegate,crudservice,$ionicPopup) {
+.controller('ApplyNewRequestCtrl', function($scope, $state,
+  $ionicSlideBoxDelegate, $ionicScrollDelegate,crudservice,$ionicPopup,
+  $ionicModal, $compile, $ionicLoading, $timeout
+  ) {
 
-    //document.getElementById('first_name').setAttribute('value','xxxxx');
+    var username = window.sessionStorage.getItem("userName");
+    //alert(username);
+    if (username == null) {
+        $state.go('app.main');
+      }
 
-    $scope.getmyapplication = function () {
-    alert("test");
-    }
-
-
-$scope.getmyapplication();
 
     // Exit app
     $scope.exit = function () {
-    ionic.Platform.exitApp();
+    $state.go('app.main')
+
     }
 
   // Called to navigate to the main app
@@ -64,10 +66,14 @@ $scope.getmyapplication();
   $scope.servicerequest={};
   $scope.submit=function()
   {
-    console.log(document.getElementById('first_name').value);
+    //console.log(document.getElementById('first_name').value);
+    //$scope.change_busy_caption("Saving...");
+    //$scope.show_busy();
+
     // alert(user.units);
   crudservice.create({
       //service_id: document.getElementById('service_id').value,
+      username: window.sessionStorage.getItem("userName"),
       first_name: document.getElementById('first_name').value,
       middle_name: document.getElementById('middle_name').value,
       last_name: document.getElementById('last_name').value,
@@ -87,6 +93,7 @@ $scope.getmyapplication();
 
     }).success(function(data)
   {
+    //$scope.close_busy();
     $ionicPopup.alert({
       title: "Service application request successfully saved."
     });

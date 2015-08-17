@@ -1,14 +1,17 @@
 angular.module('starter.services', []).factory('crudservice', ['$http','$q',crudservice])
 function crudservice($http,$q)
 {
-var baseUrl = 'http://move-ws.cfapps.io/';
+var baseUrl = 'http://move-ws.cfapps.io/service-application/';
 return{
-  getservbyId: function(servId) {
-      return $http.get(baseUrl+'get-service',servId);
+  getservAll: function() {
+      return $http.get(baseUrl+'get-all');
     },
+  getservbyId: function(username) {
+      return $http.get(baseUrl+'get?username=' + username)
+        },
   create: function(servicerequest) {
     console.log(servicerequest);
-    return $http.post(baseUrl+'service-application-request',servicerequest,{
+    return $http.post(baseUrl+'new',servicerequest,{
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8;'
             }

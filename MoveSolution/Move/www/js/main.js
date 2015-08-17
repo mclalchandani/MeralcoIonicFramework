@@ -1,10 +1,24 @@
 angular.module('starter.maincontrollers', [])
 
-.controller('MainCtrl', function ($scope, $state, $ionicModal) {
+.controller('MainCtrl', function ($scope, $state, $ionicModal,$ionicNavBarDelegate) {
 
-    $scope.hidenavbarButton = false;
-    
+    //$scope.hidenavbarButton = false;
 
+$scope.showalert= function()
+{
+  var username = window.sessionStorage.getItem("userName");
+  //alert(username);
+  if (username != null) {
+      $scope.hideme=false;
+    }
+    else {
+      {
+        $scope.hideme=true;
+      }
+    }
+}
+
+$scope.showalert();
 
 $scope.submitForm = function ()
 {

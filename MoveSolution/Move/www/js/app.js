@@ -9,7 +9,8 @@ angular.module('starter', ['ionic', 'starter.menucontrollers',
 'starter.maincontrollers',
 'starter.logincontrollers',
 'starter.Apply_NewRequest',
-'starter.Intro_NewRequest','starter.services'])
+'starter.Intro_NewRequest','starter.services',
+'starter.display_apply_newrequest'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -49,6 +50,18 @@ angular.module('starter', ['ionic', 'starter.menucontrollers',
     }
   })
 
+  .state('app.display_apply_newrequest', {
+    url: '/display_apply_newrequest',
+    views: {
+      'menuContent': {
+    templateUrl: 'templates/display_apply_newrequest.html',
+    controller: 'display_apply_newrequestCtrl'
+     }
+    }
+  })
+
+
+
   .state('app.intro_newrequest', {
     url: '/intro_newrequest',
     views: {
@@ -73,6 +86,7 @@ angular.module('starter', ['ionic', 'starter.menucontrollers',
 
 
   .state('app.main',{
+    cache: false,
     url: '/main',
         views:{
         'menuContent':{

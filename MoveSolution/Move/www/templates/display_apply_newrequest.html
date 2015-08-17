@@ -1,0 +1,50 @@
+<ion-header-bar class="ed-header"  style="background: none;"><!--Holds Page header-->
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    <!-- <h1 class="title"></h1> -->
+</ion-header-bar>
+
+<ion-content class="padding">
+
+  <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="getmyapplication()">
+    </ion-refresher>
+
+
+    <h4>Service Application Details (pull to refresh)</h4>
+
+    <ion-list>
+
+      <ion-item >
+        <p>
+          <b><font size="3" color="gray" >Service ID : {{users.service_id}}</font></b>
+        </p>
+        <br/>
+        <p>
+          <font size="3" color="gray" >Last Name : {{users.last_name}}</font>
+        </p>
+        <br/>
+        <p>
+          <font size="3" color="gray" >First Name : {{users.first_name}}</font>
+        </p>
+        <br/>
+        <p>
+          <font size="3" color="gray" >Middle Name : {{users.middle_name}}</font>
+        </p>
+        <br/>
+          <font size="3" color="gray" >Birthdate : {{users.birthdate}}</font>
+        </p>
+        <br/>
+          <font size="3" color="gray" >Contact No : {{users.contact_no}}</font>
+        </p>
+        <br/>
+          <font size="3" color="gray" >Cellphone No : {{users.cp_no}}</font>
+        </p>
+        <br/>
+          <font size="3" color="gray" >Email : {{users.email}}</font>
+        </p>
+     </ion-item>
+
+    </ion-list>
+
+</ion-content>

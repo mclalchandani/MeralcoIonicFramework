@@ -62,10 +62,10 @@ angular.module('starter.logincontrollers', [])
 	    		$scope.SIN = loginResult.SIN;
 	    		$scope.displayName = loginResult.name;
 			    $scope.hidenavbarButton=false;
-			    
+
 			    console.log($scope.loginData.username);
 			    window.sessionStorage.setItem("userName", $scope.loginData.username);
-			    
+
 
 
 	    		//Show main page and close login modal upon successful login
@@ -75,6 +75,9 @@ angular.module('starter.logincontrollers', [])
 	    		var magicScope = angular.element($("#db_page")).scope();
 	    		// magicScope.loadCards();
 	    		//$state.go('app.');
+
+					$state.go('app.intro_newrequest');
+
 
 	    	}else{
 	    		$scope.close_busy();

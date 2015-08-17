@@ -2,7 +2,7 @@ angular.module('starter.menucontrollers', [])
 
 .controller('menuCtrl', function ($scope, $ionicModal, $timeout) {
 
-    window.sessionStorage.removeItem("userName");
+window.sessionStorage.removeItem("userName");
 
  console.log('from menu' + window.sessionStorage.getItem("userName"));
  var xxx = window.sessionStorage.getItem("userName");
