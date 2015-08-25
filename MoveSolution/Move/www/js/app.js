@@ -8,7 +8,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.menucontrollers',
 'starter.dashboardcontrollers',
 'starter.maincontrollers',
 'starter.logincontrollers',
-'starter.Apply_NewRequest',
+'starter.Apply_NewRequest', 'starter.registration',
 'starter.Intro_NewRequest','starter.services',
 'starter.display_apply_newrequest'])
 
@@ -68,6 +68,16 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.menucontrollers',
       'menuContent': {
     templateUrl: 'templates/intro_newrequest.html',
     controller: 'IntroNewRequestCtrl'
+     }
+    }
+  })
+
+ .state('app.registration', {
+    url: '/register',
+    views: {
+      'menuContent': {
+    templateUrl: 'templates/register.html',
+    controller: 'RegistrationCtrl'
      }
     }
   })
