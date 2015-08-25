@@ -24,6 +24,14 @@ angular.module('starter.logincontrollers', [])
 			angular.element('#account_name_user').velocity("custom.shake", 900);
 			angular.element('#password_user').velocity("custom.shake", 900);
 		}
+		
+		
+		// Exit app
+	    $scope.exit=function () 
+	    {
+	    	console.log("inside exit");
+	    	$scope.modal.hide();
+	    }
 
 		//Load login modal upon loading the controller
 		$scope.LoginShow=function(){
