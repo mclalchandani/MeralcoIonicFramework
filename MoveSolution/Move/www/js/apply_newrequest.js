@@ -2,7 +2,7 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
 
 .controller('ApplyNewRequestCtrl', function($scope, $state,
   $ionicSlideBoxDelegate, $ionicScrollDelegate,crudservice,$ionicPopup,
-  $ionicModal, $compile, $ionicLoading, $timeout
+  $ionicModal, $compile, $ionicLoading, $timeout, $cordovaCamera, $ionicActionSheet
   ) {
 
     var username = window.sessionStorage.getItem("userName");
@@ -99,6 +99,60 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
     });
   });
   }
+  
+  $scope.attachImage=function(documentType)
+  {
+      console.log("Inside attach image");
+      console.log("DOCUMENT TYPE = " + documentType);
+      
+      var source;
+      switch(documentType)
+      {
+        case 0:
+          source = Camera.PictureSourceType.CAMERA;
+          break;
+       case 1:
+          source = Camera.PictureSourceType.PHOTOLIBRARY;
+          break;
+      }
 
+
+      var options = {
+          quality : 75,
+          destinationType : Camera.DestinationType.DATA_URL,
+          sourceType : source,
+          allowEdit : true,
+          encodingType: Camera.EncodingType.JPEG,
+          targetWidth: 300,
+          targetHeight: 300,
+          popoverOptions: CameraPopoverOptions,
+          saveToPhotoAlbum: false
+      };
+      
+      $cordovaCamera.getPicture(options).then(function(imageData) {
+          //$scope.imgURI = "data:image/jpeg;base64," + imageData;
+          alert(imageData);
+      }, function(err) {
+          // An error occured. Show a message to the user
+      });
+  }
+
+  $scope.selectImageSource=function()
+  {
+      console.log("Inside select image source");
+    
+      $scope.hideSheet = $ionicActionSheet.show({
+      buttons: [
+        { text: '<h1 class="sectiontitle">Camera</hi>' },
+        { text: '<h1 class="sectiontitle">Gallery</h1>' }
+      ],
+      titleText: '<h1 class="sectiontitle">Select Source</h1>',
+      cancelText: 'Cancel',
+      buttonClicked: function(index) {
+        $scope.attachImage(index);
+      }
+    });
+
+  }
 
 });

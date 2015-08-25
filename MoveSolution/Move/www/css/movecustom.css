@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 
 body {
-	background: #F3F3F3 !important;
+	background: #f4f4f4!important;
 }
 
 .ed-intro {
@@ -43,7 +43,7 @@ h4.ed-guide {
 	}
 
 .ed-header_service-request {
-	background: #e7e7e7 !important;
+	background: #fff !important;
 }
 
 	h1.sectiontitle {
@@ -57,9 +57,15 @@ h4.ed-guide {
 	}
 
 	h3.pagetitle {
-		font-size: 18px;
+		font-size: 13px;
+		font-weight: bold;
 		font-family: 'Montserrat', sans-serif !important;
-		color: #666;
+		color: #7e716a;
+		text-align: center !important;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 0 20px;
+
 	}
 
 	.ed-header_service-request i {
@@ -316,6 +322,51 @@ h3.ed-section-title {
 
 .ed-note p {color: #666;}
 
+.ed-steps.step2 label, .ed-steps.step3 label {
+	border-bottom: 1px solid #ddd;
+}
+	.ed-steps.step2 label:last-child, .ed-steps.step3 label:last-child {
+		border-bottom: none;
+	}
+
+	.ed-steps.step2 label span.input-label, .ed-steps.step3 label span.input-label {
+		width: 50px;
+
+	}
+
+	.ed-steps.step2 i, .ed-steps.step3 i {
+		font-size: 21px;
+	    /*background-color: #8CCCBD;*/
+	    color: #8CCCBD;
+	    padding: 1px 7px;
+	    border-radius: 20px;
+	    width: 19px;
+	    height: 20px;
+	}
+
+img.ed-img-thumb {
+	float: right;
+	width: 20px;
+}
+
+.ed-steps a i.icon.ed-done {
+	color: #31B188;
+}
+
+/* Step 4 */
+
+h3.componenttitle {
+	font-size: 13px;
+    /* font-weight: bold; */
+    font-family: 'Montserrat', sans-serif !important;
+    color: #A5A5A5;
+    text-align: left;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 1px; */
+    padding: 0 10px;
+    margin-top: 20px !important;
+}
+
 /*Security note*/
 .ed-secured {
 	  position: relative;
@@ -362,7 +413,7 @@ h3.ed-section-title {
   letter-spacing: 1px;
 }
 
-a.applynewservice {
+a.applynewservice, button.applynewservice {
 	  /*width: 100%;*/
   background-color: #FFF8F4;
   color: #f5742c;
@@ -379,7 +430,7 @@ a.applynewservice {
   -moz-border-radius: 20px;
   border-radius: 39px;
   border: 2px solid #fff;
-  /* width: 100%; */
+   width: 100%; 
   /* margin-top: 50px; */
   position: relative;
  /* top: 20px;*/
@@ -445,11 +496,23 @@ a.applynewservice {
 	height: 55px;
 }
 
+.ed-footer {
+	background: url('../img/footer-bg.png') !important;
+	font-weight: bold;
+	text-align: center;
+}
+
 .ed-footer button {
 	text-transform: uppercase;
-	color: #f5742c;
+
 	background: none;
 	border: none;
+	font-weight: bold !important;
+	font-size: 15px !important;
+
+		font-family: 'Montserrat', sans-serif !important;
+		color: #7e716a !important;
+		letter-spacing: 1px;
 
 }
 
@@ -486,7 +549,39 @@ a.applynewservice {
     color:#fff;
 }
 
-
-
-
+.exitbutton {
+	background: none !important;
+	border: none !important;
+	color: #b4b4b4 !important;
+	position: absolute !important;
+	left: 8px !important;
 }
+	.exitbutton span {
+		font-size: 33px;
+		margin-right: 15px;
+		color: #666;
+		display: inline-block;
+		float: left;
+	}
+
+.ed-steps_form .slider-pager {
+	position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 33px;
+    text-align: center;
+    font-size: 7px;
+    margin: 0;
+    padding-top: 5px;
+/*    padding: 20px 0 0 0;*/
+    background: url('../img/pager-bg.png') !important;
+}
+
+.bar-footer {
+	height: 50px !important;
+}
+
+
+   
+

@@ -1,7 +1,7 @@
 {
-  "name": "myapp1",
+  "name": "move",
   "version": "1.0.0",
-  "description": "myapp1: An Ionic project",
+  "description": "move: An Ionic project",
   "dependencies": {
     "express": "^4.13.1",
     "firebase": "^2.2.7",
