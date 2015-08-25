@@ -3,7 +3,7 @@
 
 
 <ion-view view-title="New Service Request" hide-nav-bar="false" style="">
- <ion-content id="rns_page" scroll="false">
+<ion-content id="rns_page" scroll="false">
 
      <!--
   <ion-header-bar id="0" class="ed-header" style="background:url('../img/header-bg.png') top left;">
@@ -12,22 +12,23 @@
   </ion-header-bar>
          -->
 
-<form name="frm_user">
+<form name="frm_user" class="ed-steps_form">
 
- <ion-slide-box on-slide-changed="slideChanged(index)" style="margin-bottom:1%;">
+<ion-slide-box on-slide-changed="slideChanged(index)" style="margin-bottom:1%;">
 
 
 <!--Step 1-->
 <ion-slide>
-    <ion-content has-header="true" scroll="true" style="background: f3f3f3;">
+    <ion-content has-header="true" scroll="true" style="background: #f3f3f3;">
 
         <ion-header-bar id="1" class="ed-header_service-request">
             <div class="buttons">
 
-                <button class="button" ng-click="exit()">Exit</button>
+                <button class="button exitbutton" ng-click="exit()">
+                  <span class="ion-ios-close-empty"></span>EXIT</button>
 
             </div>
-            <h1 class="sectiontitle">Step 1</h3>
+            <h1 class="sectiontitle">Step 1</h1>
         </ion-header-bar>
 
         <div class="row">
@@ -38,19 +39,19 @@
                     </div>
                 <!--Holds section contents-->
                 <div class="list card">
-                    <a href="#" class="item item-icon-right">
-                        <i class="icon ion-camera"><small>Attach</small></i>
+                    <a href="#" class="item item-icon-right" ng-click="selectImageSource();">
+                        <i class="icon ion-camera"></i>
                         Wiring permit
                     </a>
-                    <a href="#" class="item item-icon-right">
+                    <a href="#" class="item item-icon-right" ng-click="selectImageSource();">
                         <i class="icon ion-camera"><small>Attach</small></i>
                         Proof of ownership
                     </a>
-                    <a href="#" class="item item-icon-right">
+                    <a href="#" class="item item-icon-right" ng-click="selectImageSource();">
                         <i class="icon ion-camera"><small>Attach</small></i>
                         Valid ID
                     </a>
-                    <a href="#" class="item item-icon-right">
+                    <a href="#" class="item item-icon-right" ng-click="selectImageSource();">
                         <i class="icon ion-camera"><small>Attach</small></i>
                         Notarized undertaking
                     </a>
@@ -78,97 +79,95 @@
 
 <!--Step 2-->
 <ion-slide>
-    <ion-content has-header="true" scroll="true">
+    <ion-content has-header="true" scroll="true" style="background: #f3f3f3;">
 
         <ion-header-bar id="2" class="ed-header_service-request">
             <div class="buttons">
-                <button class="button" ng-click="exit()">Exit</button>
-
+                <button class="button exitbutton" ng-click="exit()">
+                  <span class="ion-ios-close-empty"></span>EXIT</button>
             </div>
-            <h1 class="sectiontitle">Step 2</h3>
-        </ion-header-bar>
 
+            <h1 class="sectiontitle">Step 2</h1>
+        </ion-header-bar>
         <div class="row"></div>
 
-        <div class="ed-steps">
-            <div class="col">
-                <h3 class="pagetitle">Requirements - Scan using your phone camera</h3>
-            </div>
-            <table style="width:100%">
-                <tr>
+                <div class="ed-steps step2">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="pagetitle">Personal Information</h3>
 
-                    <td>
-                        <label class="item item-input item-floating-label">
-                            Service ID Number:
-                            <!--<span class="input-label">Service ID Number</span>
-                            <input type="text" ng-model="user.service_id" name="service_id" id="service_id" required="" placeholder="Service ID Number" ng-maxlength="20">-->
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">First Name</span>
-                            <input type="text" ng-model="user.first_name" name="first_name" id="first_name" required="" placeholder="First Name" ng-maxlength="20">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Middle Name</span>
-                            <input type="text" ng-model="user.middle_name" name="middle_name" id="middle_name" required="" placeholder="Middle Name" ng-maxlength="20">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Last Name</span>
-                            <input type="text" ng-model="user.last_name" name="last_name" id="last_name" required="" placeholder="Last Name" ng-maxlength="20">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Birthdate</span>
-                            <input type="text" ng-model="user.birthdate" name="birthdate" id="birthdate" required="" placeholder="Birthdate (mm/dd/yyyy)">
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Contact Number</span>
-                            <input ng-pattern="/^[0-9]{1,12}$/" type="tel" ng-model="user.contact_number" placeholder="Contact Number" name="contact_number" id="contact_number" ng-maxlength="20" required="" />
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">CP No</span>
-                            <input ng-pattern="/^[0-9]{1,12}$/" type="tel" ng-model="user.cp_no" placeholder="CP No" name="cp_no" id="cp_no" ng-maxlength="20" required="" />
-                        </label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Email Address</span>
-                            <input type="email" ng-model="user.email" placeholder="Email Address" name="email" id="email" ng-maxlength="20" required="" />
-                        </label>
-                    </td>
-                </tr>
+                        </div><!--/col-->
 
-            </table>
-        </div>
+                    </div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                <label class="item item-input">
+                                    <span class="input-label"><i class="ion-person"></i></span>
+                                    <input type="text" Placeholder="Service ID Number:">
 
-        <div class="row ed-note" style="text-align: center;">
-            <!--Holds the NOTE-->
-            <p><strong>Note:</strong> You may choose to <strong>SKIP</strong> this step and just bring the requirements to the BUsiness Center.</p>
-        </div>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="item item-input">
+                                    <span class="input-label"><i class="ion-person"></i></span>
+                                    <input type="text" ng-model="user.first_name" name="first_name" id="first_name" required="" placeholder="First Name" ng-maxlength="20">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="item item-input">
+                                    <span class="input-label"><i class="ion-person"></i></span>
+                                    <input type="text" ng-model="user.middle_name" name="middle_name" id="middle_name" required="" placeholder="Middle Name" ng-maxlength="20">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="item item-input">
+                                    <span class="input-label"><i class="ion-person"></i></span>
+                                    <input type="text" ng-model="user.last_name" name="last_name" id="last_name" required="" placeholder="Last Name" ng-maxlength="20">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="item item-input">
+                                    <span class="input-label"><i class="ion-calendar"></i></span>
+                                    <input type="text" ng-model="user.birthdate" name="birthdate" id="birthdate" required="" placeholder="Birthdate (mm/dd/yyyy)">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="item item-input">
+                                    <span class="input-label"><i class="ion-ios-telephone"></i></span>
+                                    <input ng-pattern="/^[0-9]{1,12}$/" type="tel" ng-model="user.contact_number" placeholder="Contact Number" name="contact_number" id="contact_number" ng-maxlength="20" required="" />
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="item item-input">
+                                    <span class="input-label"><i class="ion-iphone"></i></span>
+                                    <input ng-pattern="/^[0-9]{1,12}$/" type="tel" ng-model="user.cp_no" placeholder="CP No" name="cp_no" id="cp_no" ng-maxlength="20" required="" />
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="item item-inputs">
+                                    <span class="input-label"><i class="ion-ios-email"></i></span>
+                                    <input type="email" ng-model="user.email" placeholder="Email Address" name="email" id="email" ng-maxlength="20" required="" />
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
         <div class="ed-secured" style="text-align: center;">
             <!--Holds security note-->
             <p data-sr='enter top'>
@@ -184,25 +183,29 @@
 
 <!--Step 3-->
  <ion-slide>
-  <ion-content has-header="true" scroll="true">
+  <ion-content has-header="true" scroll="true" style="background: #f3f3f3;">
 
       <ion-header-bar id="3" class="ed-header_service-request">
           <div class="buttons">
-              <button class="button" ng-click="exit();">Exit</button>
+              <button class="button exitbutton" ng-click="exit()">
+                  <span class="ion-ios-close-empty"></span>EXIT</button>
           </div>
-          <h1 class="sectiontitle">Step 1</h3>
+          <h1 class="sectiontitle">Step 3</h1>
       </ion-header-bar>
       <div class="row"></div>
 
-        <div class="ed-steps">
-            <div class="col">
-                <h3 class="pagetitle">Requirements - Scan using your phone camera</h3>
+        <div class="ed-steps step3">
+            <div class="row">
+                <div class="col">
+                    <h3 class="pagetitle">Estimate Load</h3>
+                </div>
             </div>
+
             <table style="width:100%">
                 <tr>
                     <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">House No</span>
+                        <label class="item item-input">
+                            <span class="input-label"><i class="ion-ios-home"></i></span>
                             <input ng-pattern="/^[0-9]{1,12}$/" type="number" ng-model="user.house_number" placeholder="House Number" name="house_number" id="house_number" ng-maxlength="20" required="" />
                         </label>
                     </td>
@@ -210,8 +213,8 @@
 
                 <tr>
                     <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Street</span>
+                        <label class="item item-input">
+                            <span class="input-label"><i class="ion-ios-home"></i></span>
                             <input type="text" ng-model="user.street" placeholder="Street"
                                     name="street" id="street" ng-maxlength="20" required="" />
                         </label>
@@ -220,8 +223,8 @@
 
                 <tr>
                     <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Barangay</span>
+                        <label class="item item-input">
+                            <span class="input-label"><i class="ion-ios-home"></i></span>
                             <input type="text" ng-model="user.barangay" name="barangay" id="barangay" required="" placeholder="Barangay" ng-maxlength="20">
                         </label>
                     </td>
@@ -230,8 +233,8 @@
 
                 <tr>
                     <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">City/Province</span>
+                        <label class="item item-input">
+                            <span class="input-label"><i class="ion-ios-home"></i></span>
                             <input type="text" ng-model="user.city" placeholder="City/Province "
                                     name="city" id="city" ng-maxlength="20" required="" />
                         </label>
@@ -241,26 +244,23 @@
 
                 <tr>
                     <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Nearest Landmark</span>
+                        <label class="item item-input">
+                            <span class="input-label"><i class="ion-information"></i></span>
                             <input type="text" ng-model="user.landmark" name="landmark" id="landmark" required="" placeholder="Landmark" ng-maxlength="20">
                         </label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label class="item item-input item-floating-label">
-                            <span class="input-label">Additional Remarks</span>
+                        <label class="item item-input">
+                            <span class="input-label"><i class="ion-information"></i></span>
                             <input type="text" ng-model="user.remarks" name="remarks" id="remarks" required="" placeholder="Additional Remarks" ng-maxlength="20">
                         </label>
                     </td>
                 </tr>
             </table>
         </div>
-      <div class="row ed-note" style="text-align: center;">
-          <!--Holds the NOTE-->
-          <p><strong>Note:</strong> You may choose to <strong>SKIP</strong> this step and just bring the requirements to the BUsiness Center.</p>
-      </div>
+
       <div class="ed-secured" style="text-align: center;">
           <!--Holds security note-->
           <p data-sr='enter top'>
@@ -274,62 +274,68 @@
 </ion-slide>
 
 
- <ion-slide>
-     <ion-content has-header="true" scroll="true">
+<!--Step 4-->
+<ion-slide>
+     <ion-content has-header="true" scroll="true" style="background: #f3f3f3;">
 
-         <ion-header-bar id="3" class="ed-header_service-request">
+         <ion-header-bar id="4" class="ed-header_service-request">
              <div class="buttons">
-                 <button class="button"  ng-click="exit();">Exit</button>
-                 <h3 class="title">Step 4 - Application Information</h3>
+                 <button class="button exitbutton" ng-click="exit()">
+                  <span class="ion-ios-close-empty"></span>EXIT</button>
+                 <!-- <h1 class="sectiontitle">Step 4</h1> -->
+                 <h3 class="title">Step 4</h3>
              </div>
          </ion-header-bar>
 
          <div class="row"></div>
 
 
-         <div class="ed-steps">
+         <div class="ed-steps step4">
+            <div class="row">
+                <div class="col">
+                    <h3 class="pagetitle">Application Information</h3>
+                </div>
+            </div>
              <table style="width:100%">
                  <tr>
-                     <span class="input-label" style="font-weight:500">Application Type</span>
-                     <div class="list list-inset">
+                    <td>
+                        <div class="col"><h3 class="componenttitle">Application Type</h3></div>
                          <ion-radio ng-repeat="item in applicationtype"
                                     ng-value="item.value"
                                     ng-model="data.applicationtype"
                                     ng-change="applicationtypeChange(item)" name="applicationtype">
                              {{item.text}}
                          </ion-radio>
-                     </div>
+                    </td>
+
                  </tr>
                  <tr>
-                     <span class="input-label" style="font-weight:500">Rate Class</span>
-                     <div class="list list-inset">
-                         <ion-radio ng-repeat="item in rateclass"
+                    <td>
+                        <div class="col"><h3 class="componenttitle">Rate Class</h3></div>
+                            <ion-radio ng-repeat="item in rateclass"
                                     ng-value="item.value"
                                     ng-model="data.rateclass"
                                     ng-change="rateclassChange(item)" name="rateclass">
                              {{item.text}}
-                         </ion-radio>
-                     </div>
+                            </ion-radio>
+                    </td>
                  </tr>
                  <tr>
-                     <td></td>
-                     <td>
-                         <label class="item item-input item-floating-label">
-                             <span class="input-label">Number of Units</span>
-                             <input type="number" ng-disabled="loc_toggle" ng-model="user.units" name="units" id="units" required="" placeholder="Number of Units" ng-maxlength="100">
+                    <td>
+                        <div class="col"><h3 class="componenttitle">Number of units</h3></div>
+                         <label class="item item-input">
+                             <input type="number" ng-disabled="loc_toggle" ng-model="user.units" name="units" id="units" required="" placeholder="1" ng-maxlength="100">
                          </label>
                      </td>
                  </tr>
              </table>
          </div>
-         <div class="spacer" style="height: 5px;"></div>
-         <button class="button icon ion-person-stalker button-block" style="background-color: #f5742c;" ng-click="submit();"> Save</button>
+
+         <div class="spacer" style="height: 10px;"></div>
+
+         <button class="applynewservice" ng-click="submit();"> SEND APPLICATION <i class="icon ion-arrow-right-c"></i></button>
 
 
-         <div class="row ed-note" style="text-align: center;">
-             <!--Holds the NOTE-->
-             <p><strong>Note:</strong> You may choose to <strong>SKIP</strong> this step and just bring the requirements to the BUsiness Center.</p>
-         </div>
          <div class="ed-secured" style="text-align: center;">
              <!--Holds security note-->
              <p data-sr='enter top'>
@@ -349,25 +355,31 @@
 
 </ion-content>
 
-<ion-footer-bar align-title="left" class="ed-footer bar bar-footer">
-<div class="buttons">
-  <button class="button button-positive button-clear no-animation"
-          ng-click="startApp()" ng-show="!slideIndex">
-      <i class="" style="color:#f5742c;"> Home</i>
-</button>
-  <button class="button button-positive button-clear no-animation" ng-click="previous()" ng-show="slideIndex > 0">
-    <i class="ion-android-arrow-back" style="color:#f5742c;" > Previous </i>
-  </button>
-<h1 class="title"></h1>
-  <button class="button button-positive button-clear no-animation"
-          ng-click="next()" ng-show="slideIndex != 3">
-    <i class="ion-android-arrow-forward" style="color:#f5742c"> Next </i>
-  </button>
-  <!-- <button class="button  button-clear no-animation"
-          ng-click="startApp()" ng-show="slideIndex == 2">
-  End
-  </button> -->
-</div>
+<ion-footer-bar align-title="left" class="ed-footer bar bar-footer" style="padding: 0;">
+    <div class="row" style="padding: 0;">
+        <div class="col col-center" style="border-right: 1px solid #ccc;">
+            <button class="button button-positive button-clear no-animation"
+              ng-click="startApp()" ng-show="!slideIndex">
+          <i class="" style="margin-left: 5px;"> Home</i>
+    </button>
+      <button class="button button-positive button-clear no-animation" ng-click="previous()" ng-show="slideIndex > 0">
+        <i class="ion-android-arrow-back" > Previous </i>
+      </button>
+        </div>
+        <div class="col col-center">
+            <button class="button button-positive button-clear no-animation"
+              ng-click="next()" ng-show="slideIndex != 3">
+         Next <i class="ion-android-arrow-forward icon-right" style="margin-right: 5px;"></i>
+      </button>
+      <!-- <button class="button  button-clear no-animation"
+              ng-click="startApp()" ng-show="slideIndex == 2">
+      End
+      </button> -->
+        </div>
+    </div>
+
+
+
 </ion-footer-bar>
 
 

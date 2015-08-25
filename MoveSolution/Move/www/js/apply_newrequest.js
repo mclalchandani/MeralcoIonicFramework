@@ -99,12 +99,12 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
     });
   });
   }
-  
+
   $scope.attachImage=function(documentType)
   {
       console.log("Inside attach image");
       console.log("DOCUMENT TYPE = " + documentType);
-      
+
       var source;
       switch(documentType)
       {
@@ -128,9 +128,10 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
           popoverOptions: CameraPopoverOptions,
           saveToPhotoAlbum: false
       };
-      
+
       $cordovaCamera.getPicture(options).then(function(imageData) {
           //$scope.imgURI = "data:image/jpeg;base64," + imageData;
+          //icon ion-checkmark-circled ed-done
           alert(imageData);
       }, function(err) {
           // An error occured. Show a message to the user
@@ -140,7 +141,7 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
   $scope.selectImageSource=function()
   {
       console.log("Inside select image source");
-    
+
       $scope.hideSheet = $ionicActionSheet.show({
       buttons: [
         { text: '<h1 class="sectiontitle">Camera</hi>' },
