@@ -1,7 +1,7 @@
 /* Empty. Add your own CSS if you like */
 
 body {
-	background: #F3F3F3 !important;
+	background: #f4f4f4!important;
 }
 
 .ed-intro {
@@ -35,32 +35,44 @@ h4.ed-guide {
 }
 
 	.ed-header h1.title {
-		color: #ccc;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 14px;
-		color: #ccc;
 		text-transform: uppercase;
 		color: #fff;
 		font-weight: bold;
 	}
 
-.ed-header2 {
-	background: #d5d5d5;
+.ed-header_service-request {
+	background: #fff !important;
 }
 
-	.ed-header2 h1.title {
-		color: #fe7214;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 14px;
-		text-transform: uppercase;
-		font-weight: bold;
-	}	
+	h1.sectiontitle {
+		color: #fe7214 !important;
+		font-family: 'Montserrat', sans-serif !important;
+		font-size: 14px !important;
+		text-transform: uppercase !important;
+		font-weight: bold !important;
+		text-align: center;
+		margin: 10px auto;
+	}
 
-	.ed-header2 i {
+	h3.pagetitle {
+		font-size: 13px;
+		font-weight: bold;
+		font-family: 'Montserrat', sans-serif !important;
+		color: #7e716a;
+		text-align: center !important;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 0 20px;
+
+	}
+
+	.ed-header_service-request i {
 		font-size: 10px;
 	}
 
-	.ed-header2 .button.button-icon {
+	.ed-header_service-request .button.button-icon {
 		font-size: 14px;
   		text-transform: uppercase;
   		color: #6B6B6B;
@@ -72,13 +84,19 @@ h4.ed-guide {
 .ed-body {
 	padding:20px;
 
-	
+
 }
 
 /*Login*/
 
 #ed-login {
-	background: #fe6f0f url('../img/loginbg.jpg') 50% -20px no-repeat;
+	background: #fe6f0f url('../img/loginbg.jpg') bottom center no-repeat;
+	background-size: cover;
+}
+
+
+#ed-login, #ed-reg {
+	background: #fe6f0f url('../img/regbg.jpg') top center no-repeat;
 	background-size: cover;
 }
 
@@ -89,23 +107,40 @@ h4.ed-guide {
 		font-family: 'Montserrat', sans-serif;
 		text-transform: uppercase;
 		/*font-size: 18px;*/
-		
+
 	}
 
-		#ed-login label.item-input {
+		#ed-login label.item-input, #ed-reg label.item-input {
 			border-bottom: 1px solid rgb(247, 146, 78);
 		}
 
-	#ed-login ::-webkit-input-placeholder {	color: #fff;}
-	#ed-login :-moz-placeholder { /* Firefox 18- */ color: #fff; }
-	#ed-login ::-moz-placeholder {  /* Firefox 19+ */ color: #fff; }
-	#ed-login :-ms-input-placeholder { color: #fff; }
-	#ed-login .item .item-input input { color: #fff; }
+
+	#ed-reg .item-input, #ed-reg .item-input input, #ed-reg label.item {
+		background: none !important;
+		border: none;
+		color: #fff !important;
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		/*font-size: 18px;*/
+
+	}
+
+		#ed-reg label.item-input {
+			border: 1px solid rgb(247, 146, 78);
+			border-radius: 25px;
+		}	
+
+
+	#ed-login ::-webkit-input-placeholder, #ed-reg ::-webkit-input-placeholder  {	color: #fff;}
+	#ed-login :-moz-placeholder, #ed-reg :-moz-placeholder { /* Firefox 18- */ color: #fff; }
+	#ed-login ::-moz-placeholder, #ed-reg ::-moz-placeholder {  /* Firefox 19+ */ color: #fff; }
+	#ed-login :-ms-input-placeholder, #ed-reg :-ms-input-placeholder { color: #fff; }
+	#ed-login .item .item-input input, #ed-reg .item .item-input input { color: #fff; }
 
 	#ed-login #ed-logo {
 		text-align: center;
 		height: 40vh;
-		padding-top:80px;
+		padding-top:60px;
 		padding-bottom: 20px;
 	}
 
@@ -113,11 +148,22 @@ h4.ed-guide {
 		width: 50vh;
 	}
 
+		#ed-login #ed-logo_signup {
+			text-align: center;
+			height: 25vh;
+			padding-top:60px;
+			padding-bottom: 20px;
+		}
+
+		#ed-login #ed-logo_signup img {
+			width: 30vh;
+		}
+
 	#ed-login #loginform {
 		height: 55vh;
 	}
 
-	#ed-login button.loginbutton {
+	#ed-login button.loginbutton, #ed-reg button.loginbutton {
 		height: 61px;
 		font-family: 'Montserrat', sans-serif;
   		font-size: 18px;
@@ -133,7 +179,22 @@ h4.ed-guide {
 		margin-bottom: 5px;
 	}
 
-		#ed-login button.loginbutton i {
+	button.fbbutton {
+		height: 61px;
+		font-family: 'Montserrat', sans-serif;
+  		font-size: 18px;
+		background: #3765a3;
+		text-transform: uppercase;
+		color: #fff;
+		border: none;
+
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		margin-bottom: 5px;
+	}
+
+		#ed-login button.loginbutton i, #ed-reg button.loginbutton i {
 			margin-left: 10px;
 		}
 
@@ -160,6 +221,14 @@ h4.ed-guide {
 			position: relative;
 			top: 2px;
 		}
+#ed-close-page  {
+    padding: 10px;
+    text-align: right;
+    font-size: 20px;
+    color: #fff;
+    position: fixed;
+    right: 7px; top: 7px;
+}
 
 /*Dashboard*/
 
@@ -169,32 +238,36 @@ h4.ed-guide {
 }
 
 #e-services ul li	{
-	font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
-	text-transform: uppercase;
-	color: #fff;
-	margin-bottom: 8px;
-	text-align: left;
+	margin-bottom: 10px;
 
 }
 
 	#e-services ul li a {
 		color: #fff;
-		text-decoration: none;		
+		text-decoration: none;
 	}
 
-	#e-services i {
-		  margin-right: 10px;
-  font-size: 20px;
-  /* background-color: black; */
-  padding: 13px;
-  width: 43px;
+	#e-services ul li button {
+		color:white;
+		text-transform:uppercase;
+		text-align:left;
+		font-family:'Montserrat', sans-serif;
+		font-size:18px;
 
-  vertical-align: middle;
-  height: 43px;
-/*  border-radius: 21px;
-    border: 1px solid #fff;*/
-  text-align: center;	
+
+		/*  border-radius: 21px;
+    		border: 1px solid #fff;*/
+  		text-align: left;
+
+	}
+
+	#e-services ul li button span  {
+		/*margin-left: 20px;*/
+	    display: inline;
+	    /*margin-left: 18px;*/
+	    padding-top: 0;
+	    /*height: 30px;*/
+	    /*float: right;*/
 	}
 
 .logindashboard {
@@ -255,11 +328,13 @@ h4.ed-guide {
 		margin-top: 10px;
 	}
 
-	  
+
 
 /*Step 1*/
 
-.ed-steps {}
+.ed-steps {
+	margin-top: 50px;
+}
 .ed-steps a i.icon {
 	color: #999;
 	font-size: 22px;
@@ -295,6 +370,51 @@ h3.ed-section-title {
 }
 
 .ed-note p {color: #666;}
+
+.ed-steps.step2 label, .ed-steps.step3 label {
+	border-bottom: 1px solid #ddd;
+}
+	.ed-steps.step2 label:last-child, .ed-steps.step3 label:last-child {
+		border-bottom: none;
+	}
+
+	.ed-steps.step2 label span.input-label, .ed-steps.step3 label span.input-label {
+		width: 50px;
+
+	}
+
+	.ed-steps.step2 i, .ed-steps.step3 i {
+		font-size: 21px;
+	    /*background-color: #8CCCBD;*/
+	    color: #8CCCBD;
+	    padding: 1px 7px;
+	    border-radius: 20px;
+	    width: 19px;
+	    height: 20px;
+	}
+
+img.ed-img-thumb {
+	float: right;
+	width: 20px;
+}
+
+.ed-steps a i.icon.ed-done {
+	color: #31B188;
+}
+
+/* Step 4 */
+
+h3.componenttitle {
+	font-size: 13px;
+    /* font-weight: bold; */
+    font-family: 'Montserrat', sans-serif !important;
+    color: #A5A5A5;
+    text-align: left;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 1px; */
+    padding: 0 10px;
+    margin-top: 20px !important;
+}
 
 /*Security note*/
 .ed-secured {
@@ -340,10 +460,10 @@ h3.ed-section-title {
   font-size: 13px;
   line-height: 19px;
   letter-spacing: 1px;
-}	
+}
 
-a.applynewservice {
-	  width: 100%;
+a.applynewservice, button.applynewservice {
+	  /*width: 100%;*/
   background-color: #FFF8F4;
   color: #f5742c;
   text-transform: uppercase;
@@ -359,11 +479,11 @@ a.applynewservice {
   -moz-border-radius: 20px;
   border-radius: 39px;
   border: 2px solid #fff;
-  /* width: 100%; */
+   width: 100%; 
   /* margin-top: 50px; */
   position: relative;
-  top: 20px;
-}	
+ /* top: 20px;*/
+}
 
 /*SIDE MENU*/
 .ed-menu-left {
@@ -425,11 +545,23 @@ a.applynewservice {
 	height: 55px;
 }
 
+.ed-footer {
+	background: url('../img/footer-bg.png') !important;
+	font-weight: bold;
+	text-align: center;
+}
+
 .ed-footer button {
 	text-transform: uppercase;
-	color: #f5742c;
+
 	background: none;
 	border: none;
+	font-weight: bold !important;
+	font-size: 15px !important;
+
+		font-family: 'Montserrat', sans-serif !important;
+		color: #7e716a !important;
+		letter-spacing: 1px;
 
 }
 
@@ -465,12 +597,155 @@ a.applynewservice {
     outline:none;
     color:#fff;
 }
+
+.exitbutton {
+	background: none !important;
+	border: none !important;
+	color: #b4b4b4 !important;
+	position: absolute !important;
+	left: 8px !important;
+}
+	.exitbutton span {
+		font-size: 33px;
+		margin-right: 15px;
+		color: #666;
+		display: inline-block;
+		float: left;
+	}
+
+.ed-steps_form .slider-pager {
+	position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 33px;
+    text-align: center;
+    font-size: 7px;
+    margin: 0;
+    padding-top: 5px;
+/*    padding: 20px 0 0 0;*/
+    background: url('../img/pager-bg.png') !important;
+}
+
+.bar-footer {
+	height: 50px !important;
+}
+
+.ed-error {
+	color: red;
+	font-size: 12px;
+	font-style: italic;
+}
+
+/*REGISTRATUON*/
+
+.ed-reg_form {
+	/*margin-top: 180px;*/
+}
+.ed-reg_form span.input-label {
+	width: 50px;
+}
+
+	.ed-reg_form span.input-label i {
+		border: 1px solid #FBCC7E;
+	    padding: 2px 7px;
+	    border-radius: 19px;
+	    display: inline-block;
+	    color: #FBCC7E;
+	    font-size: 12px;  
+
+	}
+
+.ed-reg_form label {
 	
+}
+	.ed-reg_form label.item span i, .ed-reg_form span i {
+		border: 1px solid #FBCC7E;
+	    padding: 2px 7px;
+	    border-radius: 19px;
+	    display: inline-block;
+	    color: #FBCC7E;
+	    font-size: 12px;  
+
+	}
+
+.ed-reg_form input {
+	color: #8A8A8A;
+
+}
+
+button.ed-reg_btn {
+	    /* width: 100%; */
+    background-color: #FFF8F4 !important;
+    color: #f5742c !important;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 39px;
+    border: 2px solid #fff;
+    width: 100%;
+    /* margin-top: 50px; */
+    position: relative;
+    /* top: 20px; */
+    padding-left: 30px;
+}
+
+	button.ed-reg_btn:hover {
+		background: #EFEFEF !important;
+		opacity: 0.92;
+	}
+
+
+	button.ed-reg_btn.icon-right:before {
+		padding-right: 9px;
+	}
+button.ed-reg_btn_fb {
+	    /* width: 100%; */
+    /* background-color: #3765a3!important; */
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border: none;
+    /* font-weight: bold; */
+    text-decoration: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 39px;
+    border: 1px solid #fff !important;
+    width: 100%;
+    position: relative;
+    /* top: 20px; */
+}
+
+	button.ed-reg_btn_fb i {
+		font-size: 22px;
+	}
+
+	.ed-reg_form span i.fb {
+		padding: 2px 10px;
+	    border-radius: 19px;
+	    display: inline-block;
+	    color: #fff;
+	    font-size: 12px;
+	    background: #526A8E;
+	    border: none;
+
+	}
+
+
+.ed-reg_bg {
+	background: #fe6f0f url('../img/regbg.jpg') top center no-repeat;
+	background-size: cover;
 }
 
 
+   
 
-
-
-
+   
 

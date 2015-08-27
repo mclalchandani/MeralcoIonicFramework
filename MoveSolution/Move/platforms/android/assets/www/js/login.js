@@ -24,6 +24,14 @@ angular.module('starter.logincontrollers', [])
 			angular.element('#account_name_user').velocity("custom.shake", 900);
 			angular.element('#password_user').velocity("custom.shake", 900);
 		}
+		
+		
+		// Exit app
+	    $scope.exit=function () 
+	    {
+	    	console.log("inside exit");
+	    	$scope.modal.hide();
+	    }
 
 		//Load login modal upon loading the controller
 		$scope.LoginShow=function(){
@@ -62,10 +70,10 @@ angular.module('starter.logincontrollers', [])
 	    		$scope.SIN = loginResult.SIN;
 	    		$scope.displayName = loginResult.name;
 			    $scope.hidenavbarButton=false;
-			    
+
 			    console.log($scope.loginData.username);
-			    window.sessionStorage.setItem("userName", $scope.loginData.username);
-			    
+			    window.sessionStorage.setItem("loggedIn", 'true');
+
 
 
 	    		//Show main page and close login modal upon successful login
@@ -73,8 +81,8 @@ angular.module('starter.logincontrollers', [])
 				// $scope.close_busy();
 	    		$scope.modal.hide();
 	    		var magicScope = angular.element($("#db_page")).scope();
-	    		// magicScope.loadCards();
-	    		//$state.go('app.');
+	    		$state.go('app.main');
+
 
 	    	}else{
 	    		$scope.close_busy();

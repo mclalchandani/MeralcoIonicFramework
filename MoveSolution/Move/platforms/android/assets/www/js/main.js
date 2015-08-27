@@ -1,18 +1,18 @@
 angular.module('starter.maincontrollers', [])
 
-.controller('MainCtrl', function ($scope, $state, $ionicModal) {
+.controller('MainCtrl', function ($scope, $state, $ionicModal,$ionicNavBarDelegate) {
 
-    $scope.hidenavbarButton = false;
+    //$scope.hidenavbarButton = false;
 
+$scope.userLoggedIn=function(){
+  return window.sessionStorage.getItem("loggedIn") != null;
+}
 
 
 $scope.submitForm = function ()
 {
-    //var user = $localstorage.getObject('user');
-
-    var username = window.sessionStorage.getItem("userName");
-    console.log(username);
-    if (username != null) {
+    
+    if ($scope.userLoggedIn()) {
         $state.go('app.intro_newrequest');
     }
     else {
@@ -33,4 +33,3 @@ $scope.submitForm = function ()
 
 
 })
-

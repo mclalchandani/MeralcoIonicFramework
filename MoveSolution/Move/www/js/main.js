@@ -4,29 +4,15 @@ angular.module('starter.maincontrollers', [])
 
     //$scope.hidenavbarButton = false;
 
-$scope.showalert= function()
-{
-  var username = window.sessionStorage.getItem("userName");
-  //alert(username);
-  if (username != null) {
-      $scope.hideme=false;
-    }
-    else {
-      {
-        $scope.hideme=true;
-      }
-    }
+$scope.userLoggedIn=function(){
+  return window.sessionStorage.getItem("loggedIn") != null;
 }
 
-$scope.showalert();
 
 $scope.submitForm = function ()
 {
-    //var user = $localstorage.getObject('user');
-
-    var username = window.sessionStorage.getItem("userName");
-    console.log(username);
-    if (username != null) {
+    
+    if ($scope.userLoggedIn()) {
         $state.go('app.intro_newrequest');
     }
     else {

@@ -1,6 +1,6 @@
 <!-- <ion-content class="has-header"> -->
 
-<ion-view view-title="" style="" hide-nav-bar={{hideme}}>
+<ion-view view-title="" style="" hide-nav-bar="!userLoggedIn();">
   <ion-nav-bar class="">
     <ion-nav-buttons side="left">
      <button menu-toggle="left" name="head" style="display:inline !important " class="button button-icon icon ion-navicon"></button>
@@ -14,7 +14,7 @@
         <div class="row" id="ed-logo">
             <!--Holds Logo-->
             <div class="col">
-                <img src="img/move-logo.png">
+                <img src="img/Move-logo.png">
             </div>
         </div>
 
@@ -51,7 +51,7 @@
 
         <div id="efeed" style="">
             <!--Holds login and register links-->
-            <div class="">
+            <div class="" data-ng-hide="userLoggedIn()">
                 <form>
                     <div class="logindashboard ed-center">
                         <div class="row" style="padding: 0;">

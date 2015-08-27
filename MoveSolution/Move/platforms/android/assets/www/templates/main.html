@@ -1,17 +1,20 @@
 <!-- <ion-content class="has-header"> -->
 
-<ion-view view-title="" style="background:url('../img/header-bg.png') top left;">
-
-    <!--<ion-header-bar id="1" class="ed-header" style="background:url('../img/header-bg.png') top left;">
-        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-    </ion-header-bar>-->
+<ion-view view-title="" style="" hide-nav-bar="!userLoggedIn();">
+  <ion-nav-bar class="">
+    <ion-nav-buttons side="left">
+     <button menu-toggle="left" name="head" style="display:inline !important " class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    </ion-nav-bar>
 
 
     <ion-content id="ed-login">
+
+
         <div class="row" id="ed-logo">
             <!--Holds Logo-->
             <div class="col">
-                <img src="img/move-logo.png">
+                <img src="img/Move-logo.png">
             </div>
         </div>
 
@@ -22,23 +25,22 @@
                     <div class="list">
                         <ul>
                             <li>
-                                <span><i class="ion ion-card"></i></span>
-                                <a href="#">E-Bills and Payments</a>
+                                <button class="mainbutton" ng-controller="MainCtrl" ng-click="submitForm()">
+                                    <span class="ion ion-card"></span>
+                                    <span style="padding-left: 10px;">E-bills &amp; Payments</span>
+                                </button>
                             </li>
                             <li>
-                                <span><i class="ion ion-ios-calculator"></i></span>
-                                <a href="#">Usage Calculator</a>
+                                <button class="mainbutton" ng-controller="MainCtrl" ng-click="submitForm()">
+                                    <span class="ion ion-calculator"></span>
+                                    <span style="padding-left: 10px;">Usage Calculator</span>
+                                </button>
                             </li>
                             <li>
-                                <span></span>
-                                    <button style="color:white;text-transform:uppercase;text-align:left; font-family:'Montserrat', sans-serif;font-size:18px" class="mainbutton ion ion-ios-bolt" ng-controller="MainCtrl" ng-click="submitForm()">
-                                        <span>
-
-                                            Request New Service
-
-                                        </span>
-                                    </button>
-                                
+                                <button class="mainbutton" ng-controller="MainCtrl" ng-click="submitForm()">
+                                    <span class="ion ion-android-add-circle"></span>
+                                    <span style="padding-left: 10px;">Request New Service</span>
+                                </button>
                             </li>
                         </ul>
                     </div>
@@ -49,7 +51,7 @@
 
         <div id="efeed" style="">
             <!--Holds login and register links-->
-            <div class="">
+            <div class="" data-ng-hide="userLoggedIn()">
                 <form>
                     <div class="logindashboard ed-center">
                         <div class="row" style="padding: 0;">
@@ -57,7 +59,7 @@
                                 <button class="button button-block loginbtn2" ng-controller="LoginController" ng-click="submitForm()"  type="submit">Login</button>
                             </div>
                             <div class="col">
-                                <button class="button button-block registerbtn" type="submit">Register</button>
+                                <button class="button button-block registerbtn" ng-controller="RegistrationController" ng-click="register();">Register</button>
                             </div>
                         </div>
                     </div>

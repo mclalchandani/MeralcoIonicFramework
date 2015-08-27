@@ -6,7 +6,7 @@ crudservice,$ionicPopup) {
     $scope.users={}
     $scope.getmyapplication = function() {
 
-      if (window.sessionStorage.getItem("userName")==null)
+      if (!$scope.userLoggedIn())
       {
         $state.go('app.main');
       }

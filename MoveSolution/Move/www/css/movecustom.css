@@ -90,7 +90,13 @@ h4.ed-guide {
 /*Login*/
 
 #ed-login {
-	background: #fe6f0f url('../img/loginbg.jpg') 50% -20px no-repeat;
+	background: #fe6f0f url('../img/loginbg.jpg') bottom center no-repeat;
+	background-size: cover;
+}
+
+
+#ed-login, #ed-reg {
+	background: #fe6f0f url('../img/regbg.jpg') top center no-repeat;
 	background-size: cover;
 }
 
@@ -104,15 +110,32 @@ h4.ed-guide {
 
 	}
 
-		#ed-login label.item-input {
+		#ed-login label.item-input, #ed-reg label.item-input {
 			border-bottom: 1px solid rgb(247, 146, 78);
 		}
 
-	#ed-login ::-webkit-input-placeholder {	color: #fff;}
-	#ed-login :-moz-placeholder { /* Firefox 18- */ color: #fff; }
-	#ed-login ::-moz-placeholder {  /* Firefox 19+ */ color: #fff; }
-	#ed-login :-ms-input-placeholder { color: #fff; }
-	#ed-login .item .item-input input { color: #fff; }
+
+	#ed-reg .item-input, #ed-reg .item-input input, #ed-reg label.item {
+		background: none !important;
+		border: none;
+		color: #fff !important;
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		/*font-size: 18px;*/
+
+	}
+
+		#ed-reg label.item-input {
+			border: 1px solid rgb(247, 146, 78);
+			border-radius: 25px;
+		}	
+
+
+	#ed-login ::-webkit-input-placeholder, #ed-reg ::-webkit-input-placeholder  {	color: #fff;}
+	#ed-login :-moz-placeholder, #ed-reg :-moz-placeholder { /* Firefox 18- */ color: #fff; }
+	#ed-login ::-moz-placeholder, #ed-reg ::-moz-placeholder {  /* Firefox 19+ */ color: #fff; }
+	#ed-login :-ms-input-placeholder, #ed-reg :-ms-input-placeholder { color: #fff; }
+	#ed-login .item .item-input input, #ed-reg .item .item-input input { color: #fff; }
 
 	#ed-login #ed-logo {
 		text-align: center;
@@ -125,11 +148,22 @@ h4.ed-guide {
 		width: 50vh;
 	}
 
+		#ed-login #ed-logo_signup {
+			text-align: center;
+			height: 25vh;
+			padding-top:60px;
+			padding-bottom: 20px;
+		}
+
+		#ed-login #ed-logo_signup img {
+			width: 30vh;
+		}
+
 	#ed-login #loginform {
 		height: 55vh;
 	}
 
-	#ed-login button.loginbutton {
+	#ed-login button.loginbutton, #ed-reg button.loginbutton {
 		height: 61px;
 		font-family: 'Montserrat', sans-serif;
   		font-size: 18px;
@@ -145,7 +179,22 @@ h4.ed-guide {
 		margin-bottom: 5px;
 	}
 
-		#ed-login button.loginbutton i {
+	button.fbbutton {
+		height: 61px;
+		font-family: 'Montserrat', sans-serif;
+  		font-size: 18px;
+		background: #3765a3;
+		text-transform: uppercase;
+		color: #fff;
+		border: none;
+
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		margin-bottom: 5px;
+	}
+
+		#ed-login button.loginbutton i, #ed-reg button.loginbutton i {
 			margin-left: 10px;
 		}
 
@@ -590,17 +639,33 @@ a.applynewservice, button.applynewservice {
 
 /*REGISTRATUON*/
 
+.ed-reg_form {
+	/*margin-top: 180px;*/
+}
 .ed-reg_form span.input-label {
 	width: 50px;
 }
 
 	.ed-reg_form span.input-label i {
-		    border: 1px solid #F3A068;
-    padding: 2px 6px;
-    border-radius: 19px;
-    display: inline-block;
-    color: #F3A068;
-    font-size: 12px;  
+		border: 1px solid #FBCC7E;
+	    padding: 2px 7px;
+	    border-radius: 19px;
+	    display: inline-block;
+	    color: #FBCC7E;
+	    font-size: 12px;  
+
+	}
+
+.ed-reg_form label {
+	
+}
+	.ed-reg_form label.item span i, .ed-reg_form span i {
+		border: 1px solid #FBCC7E;
+	    padding: 2px 7px;
+	    border-radius: 19px;
+	    display: inline-block;
+	    color: #FBCC7E;
+	    font-size: 12px;  
 
 	}
 
@@ -609,15 +674,14 @@ a.applynewservice, button.applynewservice {
 
 }
 
-.ed-reg_btn {
+button.ed-reg_btn {
 	    /* width: 100%; */
-    background-color: #FFF8F4;
-    color: #f5742c;
+    background-color: #FFF8F4 !important;
+    color: #f5742c !important;
     text-transform: uppercase;
     font-size: 17px;
     letter-spacing: 1px;
     border: none;
-    padding: 12px 78px;
     font-weight: bold;
     text-decoration: none;
     -webkit-border-radius: 20px;
@@ -628,9 +692,60 @@ a.applynewservice, button.applynewservice {
     /* margin-top: 50px; */
     position: relative;
     /* top: 20px; */
+    padding-left: 30px;
+}
+
+	button.ed-reg_btn:hover {
+		background: #EFEFEF !important;
+		opacity: 0.92;
+	}
+
+
+	button.ed-reg_btn.icon-right:before {
+		padding-right: 9px;
+	}
+button.ed-reg_btn_fb {
+	    /* width: 100%; */
+    /* background-color: #3765a3!important; */
+    color: #fff !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border: none;
+    /* font-weight: bold; */
+    text-decoration: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 39px;
+    border: 1px solid #fff !important;
+    width: 100%;
+    position: relative;
+    /* top: 20px; */
+}
+
+	button.ed-reg_btn_fb i {
+		font-size: 22px;
+	}
+
+	.ed-reg_form span i.fb {
+		padding: 2px 10px;
+	    border-radius: 19px;
+	    display: inline-block;
+	    color: #fff;
+	    font-size: 12px;
+	    background: #526A8E;
+	    border: none;
+
+	}
+
+
+.ed-reg_bg {
+	background: #fe6f0f url('../img/regbg.jpg') top center no-repeat;
+	background-size: cover;
 }
 
 
    
 
    
+

@@ -4,19 +4,22 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
   $ionicSlideBoxDelegate, $ionicScrollDelegate,crudservice,$ionicPopup,
   $ionicModal, $compile, $ionicLoading, $timeout, $cordovaCamera, $ionicActionSheet
   ) {
-
-    var username = window.sessionStorage.getItem("userName");
-    //alert(username);
-    if (username == null) {
-        $state.go('app.main');
-      }
-
+  
+  
+    $scope.userLoggedIn=function(){
+     return window.sessionStorage.getItem("loggedIn") != null;
+    }
 
     // Exit app
     $scope.exit = function () {
     $state.go('app.main')
 
     }
+    
+   if (!$scope.userLoggedIn()) {
+        $state.go('app.main');
+   }
+  
 
   // Called to navigate to the main app
   $scope.startApp = function() {
@@ -26,12 +29,13 @@ angular.module('starter.Apply_NewRequest', ['ionic'])
   $scope.next = function() {
     $ionicSlideBoxDelegate.next();
   };
-
+  
   $scope.previous = function() {
     $ionicSlideBoxDelegate.previous();
   };
 
 
+  
   // Called each time the slide changes
   $scope.slideChanged = function(index) {
     $scope.slideIndex = index;

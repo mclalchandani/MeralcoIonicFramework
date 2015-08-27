@@ -4,12 +4,13 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.menucontrollers',
+angular.module('starter', ['ionic', 'ngCordova', 'starter.menucontrollers',
 'starter.dashboardcontrollers',
 'starter.maincontrollers',
 'starter.logincontrollers',
-'starter.Apply_NewRequest',
-'starter.Intro_NewRequest'])
+'starter.Apply_NewRequest', 'starter.registration',
+'starter.Intro_NewRequest','starter.services',
+'starter.display_apply_newrequest'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -29,9 +30,8 @@ angular.module('starter', ['ionic', 'starter.menucontrollers',
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
-
-    .state('app', {
+    
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -49,12 +49,34 @@ angular.module('starter', ['ionic', 'starter.menucontrollers',
     }
   })
 
+  .state('app.display_apply_newrequest', {
+    url: '/display_apply_newrequest',
+    views: {
+      'menuContent': {
+    templateUrl: 'templates/display_apply_newrequest.html',
+    controller: 'display_apply_newrequestCtrl'
+     }
+    }
+  })
+
+
+
   .state('app.intro_newrequest', {
     url: '/intro_newrequest',
     views: {
       'menuContent': {
     templateUrl: 'templates/intro_newrequest.html',
     controller: 'IntroNewRequestCtrl'
+     }
+    }
+  })
+
+ .state('app.registration', {
+    url: '/register',
+    views: {
+      'menuContent': {
+    templateUrl: 'templates/register.html',
+    controller: 'RegistrationController'
      }
     }
   })
@@ -73,6 +95,7 @@ angular.module('starter', ['ionic', 'starter.menucontrollers',
 
 
   .state('app.main',{
+    cache: false,
     url: '/main',
         views:{
         'menuContent':{

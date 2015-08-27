@@ -72,7 +72,7 @@ angular.module('starter.logincontrollers', [])
 			    $scope.hidenavbarButton=false;
 
 			    console.log($scope.loginData.username);
-			    window.sessionStorage.setItem("userName", $scope.loginData.username);
+			    window.sessionStorage.setItem("loggedIn", 'true');
 
 
 
