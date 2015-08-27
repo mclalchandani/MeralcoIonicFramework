@@ -30,9 +30,8 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.menucontrollers',
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
-
-    .state('app', {
+    
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -77,7 +76,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.menucontrollers',
     views: {
       'menuContent': {
     templateUrl: 'templates/register.html',
-    controller: 'RegistrationCtrl'
+    controller: 'RegistrationController'
      }
     }
   })

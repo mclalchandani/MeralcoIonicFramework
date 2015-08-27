@@ -1,5 +1,66 @@
-<ion-view view-title="Registration" >
-<ion-content id="db_page" padding="true" has-bouncing="true">
-  <input type="button" value="Register"/>
+<ion-modal-view>
+<ion-content id="db_page" padding="false" has-bouncing="false" style="background: #f3f3f3;">
+  	<input type="button" value="Register"/>
+  	<ion-header-bar id="1" class="ed-header_service-request">
+        <div class="buttons">
+			<button class="button exitbutton" ng-click="exit()">
+            	<span class="ion-ios-close-empty"></span>EXIT</button>
+
+        </div>
+        <h1 class="sectiontitle">SIGN UP</h1>
+    </ion-header-bar>
+
+    <div class="row">
+            <div class="col">
+                <div class="">
+                    <!-- <div class="col">
+                        <h3 class="pagetitle">Requirements - Scan using your phone camera</h3>
+                    </div> -->
+
+                <div class="">
+                    <div class="row">
+                        
+                    </div>                  
+                </div>
+            </div>
+            </div>
+
+    </div>
+    <div class="row">
+    	<div class="col">
+    		<button class="button button-block ion-social-facebook icon-left" style="background: #3765a3; color: #fff;">Sign up with Facebook</button>
+		</div>
+    </div>
+    <div class="col"><h3 class="componenttitle">OR</h3></div>
+    <div class="list ed-reg_form">
+    <form name="registrationForm" ng-submit="processRegister();" ng-controller="RegistrationController">
+		<label class="item item-input">
+    		<span class="input-label"><i class="ion-person"></i></span>
+    		<input type="text" placeholder="Name" ng-model="User.name">
+  		</label>
+  		<label class="item item-input">
+    		<span class="input-label"><i class="ion-at"></i></span>
+    		<input type="text" placeholder="Email address" ng-model="User.email">
+  		</label>
+  		<label class="item item-input">
+    		<span class="input-label"><i class="ion-locked"></i></span>
+    		<input type="password" Placeholder="Password" ng-model="User.password">
+  		</label>
+  		<label class="item item-input">
+    		<span class="input-label"><i class="ion-locked"></i></span>
+    		<input type="password" Placeholder="Re-type Password">
+  		</label>
+	
+	<ion-footer-bar align-title="left" class="ed-footer bar bar-footer" style="padding: 0;">
+	    <div class="row" style="padding: 0;">
+	        <div class="col col-center">
+	         	<button class="button button-positive button-clear" type="submit">
+	        		 Submit <i class="ion-android-arrow-forward icon-right" style="margin-right: 5px;"></i>
+	      		</button>
+	        </div>
+	    </div>
+	</ion-footer-bar>
+	</form>
+	</div>
 </ion-content>
-</ion-view>
+</ion-modal-view>

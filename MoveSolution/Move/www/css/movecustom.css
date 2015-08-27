@@ -582,6 +582,55 @@ a.applynewservice, button.applynewservice {
 	height: 50px !important;
 }
 
+.ed-error {
+	color: red;
+	font-size: 12px;
+	font-style: italic;
+}
+
+/*REGISTRATUON*/
+
+.ed-reg_form span.input-label {
+	width: 50px;
+}
+
+	.ed-reg_form span.input-label i {
+		    border: 1px solid #F3A068;
+    padding: 2px 6px;
+    border-radius: 19px;
+    display: inline-block;
+    color: #F3A068;
+    font-size: 12px;  
+
+	}
+
+.ed-reg_form input {
+	color: #8A8A8A;
+
+}
+
+.ed-reg_btn {
+	    /* width: 100%; */
+    background-color: #FFF8F4;
+    color: #f5742c;
+    text-transform: uppercase;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: none;
+    padding: 12px 78px;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 39px;
+    border: 2px solid #fff;
+    width: 100%;
+    /* margin-top: 50px; */
+    position: relative;
+    /* top: 20px; */
+}
+
 
    
 
+   

@@ -81,10 +81,7 @@ angular.module('starter.logincontrollers', [])
 				// $scope.close_busy();
 	    		$scope.modal.hide();
 	    		var magicScope = angular.element($("#db_page")).scope();
-	    		// magicScope.loadCards();
-	    		//$state.go('app.');
-
-					$state.go('app.intro_newrequest');
+	    		$state.go('app.main');
 
 
 	    	}else{
