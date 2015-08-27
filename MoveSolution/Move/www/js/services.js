@@ -36,6 +36,7 @@ angular.module('starter.services', [])
 			return {
 				registerUser : function(servicerequest) {
 					console.log("INSIDE SERVICE " + servicerequest.name);
+					return 'success';
 				}
 			}
 		

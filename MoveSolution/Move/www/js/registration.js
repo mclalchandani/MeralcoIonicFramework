@@ -1,6 +1,6 @@
 angular.module('starter.registration', ['ionic'])
 
-.controller('RegistrationController', function($scope, $state, $ionicModal, registrationService)
+.controller('RegistrationController', function($scope, $state, $ionicModal, $cordovaToast, registrationService)
 {
 
 	// Exit app
@@ -29,6 +29,18 @@ angular.module('starter.registration', ['ionic'])
 		var data = $scope.User;
 		console.log("SCOPE= " + data);
 		var result = registrationService.registerUser(data);
+		
+		if(result == 'success')
+		{
+			$scope.exit();
+			
+			$cordovaToast.show('Registration successfull', 'long', 'center').then(function(success) 
+			{
+		      // success
+		    }, function (error) {
+		      // error
+		    })
+		}
 	}
 
 
