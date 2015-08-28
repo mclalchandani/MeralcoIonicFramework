@@ -34,9 +34,9 @@ angular.module('starter.registration', ['ionic'])
 		{
 			$scope.exit();
 			window.sessionStorage.setItem("loggedIn", 'true');
-			window.sessionStorage.setItem("userName",data.username);
+			window.sessionStorage.setItem("userName",data.userName);
 			
-			$cordovaToast.show('Registration successfull', 'long', 'bottom').then(function(success) 
+			$cordovaToast.show('Registration successful', 'long', 'bottom').then(function(success) 
 			{
 		      // success
 		    }, function (error) {

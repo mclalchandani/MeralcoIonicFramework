@@ -36,6 +36,16 @@ angular.module('starter.services', [])
 			return {
 				registerUser : function(servicerequest) {
 					console.log("INSIDE SERVICE " + servicerequest.name);
+						$http
+							.post(
+									baseUrl,
+									servicerequest,
+									{
+										headers : {
+											'Content-Type' : 'application/json'
+										}
+									});
+					
 					return 'success';
 				}
 			}
