@@ -31,23 +31,45 @@ angular.module('starter.services', [])
 
 		function registrationService($http, $q) {
 		
-			var baseUrl = '';
+			var baseUrl = 'http://move-ws.cfapps.io/register/';
+			var loginUrl = 'http://move-ws.cfapps.io/oauth/token';
+			
 		
 			return {
-				registerUser : function(servicerequest) {
-					console.log("INSIDE SERVICE " + servicerequest.name);
-						$http
+				registerUser : function(userRequest) {
+					console.log("INSIDE SERVICE " + userRequest);
+					 return $http
 							.post(
 									baseUrl,
-									servicerequest,
+									userRequest,
 									{
 										headers : {
 											'Content-Type' : 'application/json'
 										}
 									});
 					
-					return 'success';
-				}
+				},
+				
+				
+				login: function(userRequest) {
+				
+									
+				  $http({
+                    method: 'POST',
+                    url: 'http://move-ws.cfapps.io/oauth/token',
+                    data: 'grant_type=password&scope=read+write&client_secret=123456&client_id=clientapp&username=1&password=1',
+                    headers: {'Content-Type' : 'application/x-www-form-urlencoded','Authorization': 'Basic Y2xpZW50YXBwOjEyMzQ1Ng==', 'Accept' : 'application/json'},
+                    withCredentials: true
+                  }).success(function(data){
+                    alert("success");
+                  }).error(function(){
+                     alert("error");
+                  });
+			   }
+			
+			  
+			   
+			
 			}
 		
 		})

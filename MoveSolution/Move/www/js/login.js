@@ -1,7 +1,7 @@
 
 angular.module('starter.logincontrollers', [])
 .controller('LoginController',
-	function ($scope, $ionicModal, $compile, $ionicLoading, $timeout, $ionicPopup, $state)
+	function ($scope, $ionicModal, $compile, $ionicLoading, $timeout, $ionicPopup, $state,registrationService)
 	{
     	$scope.login = {
 	    	username: '',
@@ -61,10 +61,13 @@ angular.module('starter.logincontrollers', [])
 		$scope.loginOffline = function () {
 			// $scope.change_busy_caption("Signing In");
 			// $scope.show_busy();
+            console.log($scope.loginData);
+            var loginInformation = $scope.loginData;
+	    	loginResult = registrationService.login({ username: loginInformation.username, password: loginInformation.password});
+	    	
+	    	console.log("RETURN FROM LOGIN SERVICE=" + JSON.stringify(loginResult));
 
-	    	loginResult = {"isSuccessful":true,"name":"My Admin","uID":1,"success":"true"}
-
-			if(loginResult.success == "true" || !settings.user_authentication){
+			if(loginResult.success == "true"){
 	    		console.log("[LOGIN] " + loginResult.uID + " logged in");
 	    		$scope.userID = loginResult.uID;
 	    		$scope.SIN = loginResult.SIN;
@@ -85,7 +88,6 @@ angular.module('starter.logincontrollers', [])
 
 
 	    	}else{
-	    		$scope.close_busy();
 	    		var incorrect_popup = $ionicPopup.confirm({
 	    			 template: "<style> .popup-buttons{display: none;} .popup-head { background-color: #ddd; border: 0px;}.popup-body{max-height: 0px; padding: 0px;} .popup-container .popup {border-radius: 5px; border: 1px solid #ddd;}</style>",
 	    			 title: 'Incorrect Credentials',

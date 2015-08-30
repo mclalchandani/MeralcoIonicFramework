@@ -30,7 +30,9 @@ angular.module('starter.registration', ['ionic'])
 		console.log("SCOPE= " + data);
 		var result = registrationService.registerUser(data);
 		
-		if(result == 'success')
+		console.log("RETURN FROM SERVICE= "  + JSON.stringify(result));
+		
+		if(result != null)
 		{
 			$scope.exit();
 			window.sessionStorage.setItem("loggedIn", 'true');

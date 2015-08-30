@@ -1,5 +1,5 @@
 applications:
-- name: movemyapp1  
+- name: Move  
   memory: 512M 
   instances: 1
   env:
